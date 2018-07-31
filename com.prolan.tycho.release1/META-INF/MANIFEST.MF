@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Release1
+Bundle-SymbolicName: com.prolan.tycho.release1
+Bundle-Version: 1.0.0.qualifier
+Export-Package: com.prolan.tycho.release1
+Require-Bundle: com.prolan.tycho.release2;bundle-version="1.0.0"
