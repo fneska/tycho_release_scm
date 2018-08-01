@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?artifactRepository version='1.1.0'?>
 <artifacts size='1'>
-  <artifact classifier='osgi.bundle' id='com.prolan.tycho.release2' version='1.1.13.201808011429'>
+  <artifact classifier='osgi.bundle' id='com.prolan.tycho.release2' version='1.1.14'>
     <properties size='5'>
-      <property name='artifact.size' value='2575'/>
-      <property name='download.size' value='2575'/>
+      <property name='artifact.size' value='2546'/>
+      <property name='download.size' value='2546'/>
       <property name='maven-groupId' value='com.prolan.tycho'/>
       <property name='maven-artifactId' value='com.prolan.tycho.release2'/>
-      <property name='maven-version' value='1.1.13-SNAPSHOT'/>
+      <property name='maven-version' value='1.1.14'/>
     </properties>
   </artifact>
 </artifacts>
