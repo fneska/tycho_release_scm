@@ -2,5 +2,5 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Release3
 Bundle-SymbolicName: com.prolan.tycho.release3
-Bundle-Version: 1.1.6
+Bundle-Version: 1.1.7.qualifier
 Export-Package: com.prolan.tycho.release3
