@@ -118,8 +118,8 @@
 							<goal>tag</goal>
 						</goals>
 						<configuration>
-							<tag>v.1.1.142</tag>
-							<basedir>./</basedir>
+							<tag>v.1.1.1422</tag>
+							<basedir>../</basedir>
 							<includes>versions/*</includes>
 							<message>[Add Version to git]</message>
 							<username>fneska</username>
