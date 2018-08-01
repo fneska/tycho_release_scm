@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.prolan.tycho</groupId>
 	<artifactId>com.prolan.tycho.root</artifactId>
-	<version>1.1.13-SNAPSHOT</version>
+	<version>1.1.14</version>
 	<packaging>pom</packaging>
 
 	<scm>
@@ -88,47 +88,48 @@
 				<version>1.2.0</version>
 			</plugin>
 
-<!-- 			<plugin> -->
-<!-- 				<groupId>org.apache.maven.plugins</groupId> -->
-<!-- 				<artifactId>maven-scm-plugin</artifactId> -->
-<!-- 				<version>1.10.0</version> -->
-<!-- 				<configuration> -->
-<!-- 					<connectionType>connection</connectionType> -->
-<!-- 				</configuration> -->
-<!-- 				<executions> -->
-<!-- 					<execution> -->
-<!-- 						<id>commit-version-to-git</id> -->
-<!-- 						<phase>package</phase> -->
-<!-- 						<goals> -->
-<!-- 							<goal>checkin</goal> -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-scm-plugin</artifactId>
+				<version>1.10.0</version>
+				<configuration>
+					<connectionType>connection</connectionType>
+				</configuration>
+				<executions>
+					<execution>
+						<id>commit-version-to-git</id>
+						<phase>package</phase>
+						<goals>
+							<goal>checkin</goal>
 							
-<!-- 						</goals> -->
-<!-- 						<configuration> -->
+						</goals>
+						<configuration>
 							
-<!-- 							<basedir>./</basedir> -->
-<!-- 							<message>[Add Version to git]</message> -->
-<!-- 							<pushChanges>false</pushChanges> -->
-<!-- 						</configuration> -->
-<!-- 					</execution> -->
-<!-- 					<execution> -->
-<!-- 						<id>add-version-to-git</id> -->
-<!-- 						<phase>package</phase> -->
-<!-- 						<goals> -->
+							<basedir>./</basedir>
+							<message>[Add Version to git]</message>
+							<pushChanges>false</pushChanges>
+						</configuration>
+					</execution>
+					<execution>
+						<id>add-version-to-git</id>
+						<phase>package</phase>
+						<goals>
 							
-<!-- 							<goal>tag</goal> -->
-<!-- 						</goals> -->
-<!-- 						<configuration> -->
-<!-- 							<tag>v.1.1.12</tag> -->
-<!-- 							<basedir>./</basedir> -->
-<!-- 							<includes>versions/*</includes> -->
-<!-- 							<message>[Add Version to git]</message> -->
-<!-- 							<username>fneska</username> -->
-<!-- 							<password>jamiNa73</password> -->
+							<goal>tag</goal>
+						</goals>
+						<configuration>
+							<tag>v.1.1.14</tag>
+							<basedir>./</basedir>
+							<includes>versions/*</includes>
+							<message>[Add Version to git]</message>
+							<username>fneska</username>
+							<password>jamiNa73</password>
+							<addTimestamp>true</addTimestamp>
 							
-<!-- 						</configuration> -->
-<!-- 					</execution> -->
-<!-- 				</executions> -->
-<!-- 			</plugin> -->
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 
 		</plugins>
 	</build>
