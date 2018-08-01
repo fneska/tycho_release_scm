@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.prolan.tycho</groupId>
 	<artifactId>com.prolan.tycho.root</artifactId>
-	<version>1.1.16-SNAPSHOT</version>
+	<version>1.1.14</version>
 	<packaging>pom</packaging>
 
 	<scm>
@@ -13,7 +13,14 @@
 
 	</scm>
 
-	
+	<distributionManagement>
+		<repository>
+			<id>internal.repo</id>
+			<name>Internal repo</name>
+			<url>file://C:/users/fekete.agnes/my_github2/tycho_release_scm</url>
+			<layout>default</layout>
+		</repository>
+	</distributionManagement>
 	<properties>
 		<tycho.version>1.2.0</tycho.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -111,15 +118,14 @@
 							<goal>tag</goal>
 						</goals>
 						<configuration>
-							<tag>v.1.1.14</tag>
+							<tag>v.1.1.142</tag>
 							<basedir>./</basedir>
 							<includes>versions/*</includes>
 							<message>[Add Version to git]</message>
-							<connectionUrl>scm:git:[push=]https://github.com/fneska/tycho_release_scm</connectionUrl>
 							<username>fneska</username>
 							<password>jamiNa73</password>
-							<addTimestamp>true</addTimestamp>
-							
+							<addTimestamp>false</addTimestamp>
+							<connectionUrl>scm:git:[push=]https://github.com/fneska/tycho_release_scm</connectionUrl>
 						</configuration>
 					</execution>
 				</executions>
