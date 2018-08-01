@@ -120,6 +120,7 @@
 						<configuration>
 							<tag>v.1.1.1426</tag>
 							<basedir>./</basedir>
+							<excludes>com.prolan.tycho.release3</excludes>
 							<push>false</push>
 							<includes>versions/*</includes>
 							<message>[Add Version to git]</message>
