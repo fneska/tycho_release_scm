@@ -119,7 +119,7 @@
 						</goals>
 						<configuration>
 							<tag>v.1.1.14</tag>
-							<basedir>./com.prolan.tycho.root</basedir>
+							<basedir>./</basedir>
 							<includes>versions/*</includes>
 							<message>[Add Version to git]</message>
 							<username>fneska</username>
