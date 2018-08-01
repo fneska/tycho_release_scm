@@ -118,7 +118,7 @@
 							<goal>tag</goal>
 						</goals>
 						<configuration>
-							<tag>v.1.1.1422</tag>
+							<tag>v.1.1.1423</tag>
 							<basedir></basedir>
 							<includes>versions/*</includes>
 							<message>[Add Version to git]</message>
