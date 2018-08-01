@@ -4,4 +4,4 @@ Bundle-Name: Release1
 Bundle-SymbolicName: com.prolan.tycho.release1
 Bundle-Version: 1.1.3
 Export-Package: com.prolan.tycho.release1
-Require-Bundle: com.prolan.tycho.release2;bundle-version="1.1.2.qualifier"
+Require-Bundle: com.prolan.tycho.release2;bundle-version="1.1.3"
