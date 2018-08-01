@@ -115,6 +115,7 @@
 							<basedir>./</basedir>
 							<includes>versions/*</includes>
 							<message>[Add Version to git]</message>
+							<connectionUrl>scm:git:[push=]https://github.com/fneska/tycho_release_scm</connectionUrl>
 							<username>fneska</username>
 							<password>jamiNa73</password>
 							<addTimestamp>true</addTimestamp>
