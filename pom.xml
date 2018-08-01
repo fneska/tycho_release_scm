@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.prolan.tycho</groupId>
 	<artifactId>com.prolan.tycho.root</artifactId>
-	<version>1.1.14</version>
+	<version>1.1.16</version>
 	<packaging>pom</packaging>
 
 	<scm>
@@ -118,7 +118,7 @@
 							<goal>tag</goal>
 						</goals>
 						<configuration>
-							<tag>v.1.1.1425</tag>
+							<tag>v.1.1.1426</tag>
 							<basedir>./</basedir>
 							<push>false</push>
 							<includes>versions/*</includes>
