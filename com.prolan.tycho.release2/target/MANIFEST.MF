@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-SymbolicName: com.prolan.tycho.release2
 Export-Package: com.prolan.tycho.release2
 Bundle-Name: Release2
-Bundle-Version: 1.1.14
-Require-Bundle: com.prolan.tycho.release3;bundle-version="1.1.14"
+Bundle-Version: 1.1.15.201808011530
+Require-Bundle: com.prolan.tycho.release3;bundle-version="1.1.15"
 Bundle-ManifestVersion: 2
 
