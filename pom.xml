@@ -13,14 +13,7 @@
 
 	</scm>
 
-	<distributionManagement>
-		<repository>
-			<id>internal.repo</id>
-			<name>Internal repo</name>
-			<url>file://C:/users/fekete.agnes/my_github2/tycho_release_scm</url>
-			<layout>default</layout>
-		</repository>
-	</distributionManagement>
+	
 	<properties>
 		<tycho.version>1.2.0</tycho.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
