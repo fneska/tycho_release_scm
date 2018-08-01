@@ -92,6 +92,7 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-scm-plugin</artifactId>
 				<version>1.10.0</version>
+				<inherited>false</inherited> 
 				<configuration>
 					<connectionType>connection</connectionType>
 				</configuration>
@@ -118,7 +119,7 @@
 							<goal>tag</goal>
 						</goals>
 						<configuration>
-							<tag>v.1.1.1427</tag>
+							<tag>v.1.1.1499</tag>
 							<basedir>./</basedir>
 							<excludes>com.prolan.tycho.release3</excludes>
 							<push>false</push>
