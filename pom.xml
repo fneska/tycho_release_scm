@@ -6,8 +6,8 @@
 	<packaging>pom</packaging>
 
 	<scm>
-		<connection>scm:git:https://github.com/fneska/tycho_release_scm.git</connection>
-		<developerConnection>scm:git:https://github.com/fneska/tycho_release_scm.git</developerConnection>
+		<connection>scm:git:https://github.com/fneska/tycho_release_scm</connection>
+		<developerConnection>scm:git:https://github.com/fneska/tycho_release_scm</developerConnection>
 		<tag>HEAD</tag>
 		<url>https://github.com/fneska/tycho_release_scm</url>
 
