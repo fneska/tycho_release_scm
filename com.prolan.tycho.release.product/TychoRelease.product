@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="TychoRelease" uid="com.prolan.tycho.releaseId" id="com.prolan.tycho.release" application="org.eclipse.help.base.helpApplication" version="9.0.0" useFeatures="false" includeLaunchers="true">
+<product name="TychoRelease" uid="com.prolan.tycho.releaseId" id="com.prolan.tycho.release" application="org.eclipse.help.base.helpApplication" version="10.0.0" useFeatures="false" includeLaunchers="true">
 
    <configIni use="default">
    </configIni>
