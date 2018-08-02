@@ -1,21 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?artifactRepository version='1.1.0'?>
-<artifacts size='2'>
-  <artifact classifier='binary' id='com.prolan.tycho.releaseId.executable.win32.win32.x86_64' version='1.0.0.201807311536'>
+<artifacts size='1'>
+  <artifact classifier='binary' id='com.prolan.tycho.releaseId.executable.win32.win32.x86_64' version='9.0.0'>
     <properties size='5'>
       <property name='maven-groupId' value='com.prolan.tycho'/>
       <property name='maven-artifactId' value='com.prolan.tycho.product'/>
-      <property name='maven-version' value='1.0.0-SNAPSHOT'/>
+      <property name='maven-version' value='9.0.0'/>
       <property name='maven-classifier' value='com.prolan.tycho.releaseId.executable.win32.win32.x86_64'/>
-      <property name='maven-extension' value='zip'/>
-    </properties>
-  </artifact>
-  <artifact classifier='binary' id='com.prolan.tycho.releaseId.executable.win32.win32.x86' version='1.0.0.201807311536'>
-    <properties size='5'>
-      <property name='maven-groupId' value='com.prolan.tycho'/>
-      <property name='maven-artifactId' value='com.prolan.tycho.product'/>
-      <property name='maven-version' value='1.0.0-SNAPSHOT'/>
-      <property name='maven-classifier' value='com.prolan.tycho.releaseId.executable.win32.win32.x86'/>
       <property name='maven-extension' value='zip'/>
     </properties>
   </artifact>

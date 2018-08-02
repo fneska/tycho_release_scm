@@ -1,86 +1,74 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<units size='25'>
-  <unit id='tooling.org.eclipse.update.feature.default' version='1.0.0' singleton='false'>
-    <hostRequirements size='1'>
-      <required namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' range='0.0.0' optional='true' multiple='true' greedy='false'/>
-    </hostRequirements>
-    <properties size='1'>
-      <property name='org.eclipse.equinox.p2.type.fragment' value='true'/>
-    </properties>
-    <provides size='2'>
-      <provided namespace='org.eclipse.equinox.p2.iu' name='tooling.org.eclipse.update.feature.default' version='1.0.0'/>
-      <provided namespace='org.eclipse.equinox.p2.flavor' name='tooling' version='1.0.0'/>
-    </provides>
-    <requires size='1'>
-      <required namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' range='0.0.0' optional='true' multiple='true' greedy='false'/>
-    </requires>
-    <filter>
-      (org.eclipse.update.install.features=true)
-    </filter>
-    <touchpoint id='null' version='0.0.0'/>
-    <touchpointData size='1'>
-      <instructions size='2'>
-        <instruction key='uninstall'>
-          uninstallFeature(feature:${artifact},featureId:default,featureVersion:default)
-        </instruction>
-        <instruction key='install'>
-          installFeature(feature:${artifact},featureId:default,featureVersion:default)
-        </instruction>
-      </instructions>
-    </touchpointData>
-  </unit>
-  <unit id='toolingcom.prolan.tycho.releaseId.application' version='1.0.0.201807311536'>
-    <provides size='1'>
-      <provided namespace='org.eclipse.equinox.p2.iu' name='toolingcom.prolan.tycho.releaseId.application' version='1.0.0.201807311536'/>
-    </provides>
-    <requires size='9'>
-      <required namespace='org.eclipse.equinox.p2.iu' name='toolingorg.eclipse.equinox.launcher.win32.win32.x86' range='[1.1.401.v20161122-1740,1.1.401.v20161122-1740]'>
-        <filter>
-          (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
-        </filter>
-      </required>
-      <required namespace='org.eclipse.equinox.p2.iu' name='com.prolan.tycho.releaseId.executable.win32.win32.x86.TychoRelease' range='[1.0.0.201807311536,1.0.0.201807311536]'>
-        <filter>
-          (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
-        </filter>
-      </required>
-      <required namespace='org.eclipse.equinox.p2.iu' name='toolingorg.eclipse.equinox.launcher.win32.win32.x86_64' range='[1.1.401.v20161122-1740,1.1.401.v20161122-1740]'>
-        <filter>
-          (&amp;(osgi.arch=x86_64)(osgi.os=win32)(osgi.ws=win32))
-        </filter>
-      </required>
-      <required namespace='org.eclipse.equinox.p2.iu' name='toolingcom.prolan.tycho.releaseId.executable.win32.win32.x86_64' range='[1.0.0.201807311536,1.0.0.201807311536]'>
-        <filter>
-          (&amp;(osgi.arch=x86_64)(osgi.os=win32)(osgi.ws=win32))
-        </filter>
-      </required>
-      <required namespace='org.eclipse.equinox.p2.iu' name='toolingcom.prolan.tycho.releaseId.executable.win32.win32.x86' range='[1.0.0.201807311536,1.0.0.201807311536]'>
-        <filter>
-          (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
-        </filter>
-      </required>
-      <required namespace='org.eclipse.equinox.p2.iu' name='com.prolan.tycho.releaseId.executable.win32.win32.x86' range='[1.0.0.201807311536,1.0.0.201807311536]'>
-        <filter>
-          (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
-        </filter>
-      </required>
-      <required namespace='org.eclipse.equinox.p2.iu' name='com.prolan.tycho.releaseId.executable.win32.win32.x86_64.TychoRelease' range='[1.0.0.201807311536,1.0.0.201807311536]'>
-        <filter>
-          (&amp;(osgi.arch=x86_64)(osgi.os=win32)(osgi.ws=win32))
-        </filter>
-      </required>
-      <required namespace='org.eclipse.equinox.p2.iu' name='toolingorg.eclipse.equinox.launcher' range='[1.3.201.v20161025-1711,1.3.201.v20161025-1711]'/>
-      <required namespace='org.eclipse.equinox.p2.iu' name='com.prolan.tycho.releaseId.executable.win32.win32.x86_64' range='[1.0.0.201807311536,1.0.0.201807311536]'>
-        <filter>
-          (&amp;(osgi.arch=x86_64)(osgi.os=win32)(osgi.ws=win32))
-        </filter>
-      </required>
-    </requires>
-    <touchpoint id='null' version='0.0.0'/>
-  </unit>
-  <unit id='a.jre.javase' version='1.6.0' singleton='false'>
-    <provides size='171'>
-      <provided namespace='org.eclipse.equinox.p2.iu' name='a.jre.javase' version='1.6.0'/>
+<units size='19'>
+  <unit id='a.jre.javase' version='10.0.0' singleton='false'>
+    <provides size='252'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='a.jre.javase' version='10.0.0'/>
+      <provided namespace='java.package' name='java.applet' version='0.0.0'/>
+      <provided namespace='java.package' name='java.awt' version='0.0.0'/>
+      <provided namespace='java.package' name='java.awt.color' version='0.0.0'/>
+      <provided namespace='java.package' name='java.awt.datatransfer' version='0.0.0'/>
+      <provided namespace='java.package' name='java.awt.desktop' version='0.0.0'/>
+      <provided namespace='java.package' name='java.awt.dnd' version='0.0.0'/>
+      <provided namespace='java.package' name='java.awt.event' version='0.0.0'/>
+      <provided namespace='java.package' name='java.awt.font' version='0.0.0'/>
+      <provided namespace='java.package' name='java.awt.geom' version='0.0.0'/>
+      <provided namespace='java.package' name='java.awt.im' version='0.0.0'/>
+      <provided namespace='java.package' name='java.awt.im.spi' version='0.0.0'/>
+      <provided namespace='java.package' name='java.awt.image' version='0.0.0'/>
+      <provided namespace='java.package' name='java.awt.image.renderable' version='0.0.0'/>
+      <provided namespace='java.package' name='java.awt.print' version='0.0.0'/>
+      <provided namespace='java.package' name='java.beans' version='0.0.0'/>
+      <provided namespace='java.package' name='java.beans.beancontext' version='0.0.0'/>
+      <provided namespace='java.package' name='java.io' version='0.0.0'/>
+      <provided namespace='java.package' name='java.lang' version='0.0.0'/>
+      <provided namespace='java.package' name='java.lang.annotation' version='0.0.0'/>
+      <provided namespace='java.package' name='java.lang.instrument' version='0.0.0'/>
+      <provided namespace='java.package' name='java.lang.invoke' version='0.0.0'/>
+      <provided namespace='java.package' name='java.lang.management' version='0.0.0'/>
+      <provided namespace='java.package' name='java.lang.module' version='0.0.0'/>
+      <provided namespace='java.package' name='java.lang.ref' version='0.0.0'/>
+      <provided namespace='java.package' name='java.lang.reflect' version='0.0.0'/>
+      <provided namespace='java.package' name='java.math' version='0.0.0'/>
+      <provided namespace='java.package' name='java.net' version='0.0.0'/>
+      <provided namespace='java.package' name='java.net.spi' version='0.0.0'/>
+      <provided namespace='java.package' name='java.nio' version='0.0.0'/>
+      <provided namespace='java.package' name='java.nio.channels' version='0.0.0'/>
+      <provided namespace='java.package' name='java.nio.channels.spi' version='0.0.0'/>
+      <provided namespace='java.package' name='java.nio.charset' version='0.0.0'/>
+      <provided namespace='java.package' name='java.nio.charset.spi' version='0.0.0'/>
+      <provided namespace='java.package' name='java.nio.file' version='0.0.0'/>
+      <provided namespace='java.package' name='java.nio.file.attribute' version='0.0.0'/>
+      <provided namespace='java.package' name='java.nio.file.spi' version='0.0.0'/>
+      <provided namespace='java.package' name='java.rmi' version='0.0.0'/>
+      <provided namespace='java.package' name='java.rmi.activation' version='0.0.0'/>
+      <provided namespace='java.package' name='java.rmi.dgc' version='0.0.0'/>
+      <provided namespace='java.package' name='java.rmi.registry' version='0.0.0'/>
+      <provided namespace='java.package' name='java.rmi.server' version='0.0.0'/>
+      <provided namespace='java.package' name='java.security' version='0.0.0'/>
+      <provided namespace='java.package' name='java.security.acl' version='0.0.0'/>
+      <provided namespace='java.package' name='java.security.cert' version='0.0.0'/>
+      <provided namespace='java.package' name='java.security.interfaces' version='0.0.0'/>
+      <provided namespace='java.package' name='java.security.spec' version='0.0.0'/>
+      <provided namespace='java.package' name='java.sql' version='0.0.0'/>
+      <provided namespace='java.package' name='java.text' version='0.0.0'/>
+      <provided namespace='java.package' name='java.text.spi' version='0.0.0'/>
+      <provided namespace='java.package' name='java.time' version='0.0.0'/>
+      <provided namespace='java.package' name='java.time.chrono' version='0.0.0'/>
+      <provided namespace='java.package' name='java.time.format' version='0.0.0'/>
+      <provided namespace='java.package' name='java.time.temporal' version='0.0.0'/>
+      <provided namespace='java.package' name='java.time.zone' version='0.0.0'/>
+      <provided namespace='java.package' name='java.util' version='0.0.0'/>
+      <provided namespace='java.package' name='java.util.concurrent' version='0.0.0'/>
+      <provided namespace='java.package' name='java.util.concurrent.atomic' version='0.0.0'/>
+      <provided namespace='java.package' name='java.util.concurrent.locks' version='0.0.0'/>
+      <provided namespace='java.package' name='java.util.function' version='0.0.0'/>
+      <provided namespace='java.package' name='java.util.jar' version='0.0.0'/>
+      <provided namespace='java.package' name='java.util.logging' version='0.0.0'/>
+      <provided namespace='java.package' name='java.util.prefs' version='0.0.0'/>
+      <provided namespace='java.package' name='java.util.regex' version='0.0.0'/>
+      <provided namespace='java.package' name='java.util.spi' version='0.0.0'/>
+      <provided namespace='java.package' name='java.util.stream' version='0.0.0'/>
+      <provided namespace='java.package' name='java.util.zip' version='0.0.0'/>
       <provided namespace='java.package' name='javax.accessibility' version='0.0.0'/>
       <provided namespace='java.package' name='javax.activation' version='0.0.0'/>
       <provided namespace='java.package' name='javax.activity' version='0.0.0'/>
@@ -151,6 +139,7 @@
       <provided namespace='java.package' name='javax.swing.plaf.basic' version='0.0.0'/>
       <provided namespace='java.package' name='javax.swing.plaf.metal' version='0.0.0'/>
       <provided namespace='java.package' name='javax.swing.plaf.multi' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.swing.plaf.nimbus' version='0.0.0'/>
       <provided namespace='java.package' name='javax.swing.plaf.synth' version='0.0.0'/>
       <provided namespace='java.package' name='javax.swing.table' version='0.0.0'/>
       <provided namespace='java.package' name='javax.swing.text' version='0.0.0'/>
@@ -194,6 +183,7 @@
       <provided namespace='java.package' name='javax.xml.ws.http' version='0.0.0'/>
       <provided namespace='java.package' name='javax.xml.ws.soap' version='0.0.0'/>
       <provided namespace='java.package' name='javax.xml.ws.spi' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.xml.ws.spi.http' version='0.0.0'/>
       <provided namespace='java.package' name='javax.xml.ws.wsaddressing' version='0.0.0'/>
       <provided namespace='java.package' name='javax.xml.xpath' version='0.0.0'/>
       <provided namespace='java.package' name='org.ietf.jgss' version='0.0.0'/>
@@ -251,75 +241,69 @@
       <provided namespace='osgi.ee' name='JavaSE' version='1.4.0'/>
       <provided namespace='osgi.ee' name='JavaSE' version='1.5.0'/>
       <provided namespace='osgi.ee' name='JavaSE' version='1.6.0'/>
+      <provided namespace='osgi.ee' name='JavaSE' version='1.7.0'/>
+      <provided namespace='osgi.ee' name='JavaSE' version='1.8.0'/>
+      <provided namespace='osgi.ee' name='JavaSE' version='9.0.0'/>
+      <provided namespace='osgi.ee' name='JavaSE' version='10.0.0'/>
+      <provided namespace='osgi.ee' name='JavaSE/compact1' version='1.8.0'/>
+      <provided namespace='osgi.ee' name='JavaSE/compact1' version='9.0.0'/>
+      <provided namespace='osgi.ee' name='JavaSE/compact1' version='10.0.0'/>
+      <provided namespace='osgi.ee' name='JavaSE/compact2' version='1.8.0'/>
+      <provided namespace='osgi.ee' name='JavaSE/compact2' version='9.0.0'/>
+      <provided namespace='osgi.ee' name='JavaSE/compact2' version='10.0.0'/>
+      <provided namespace='osgi.ee' name='JavaSE/compact3' version='1.8.0'/>
+      <provided namespace='osgi.ee' name='JavaSE/compact3' version='9.0.0'/>
+      <provided namespace='osgi.ee' name='JavaSE/compact3' version='10.0.0'/>
     </provides>
     <touchpoint id='org.eclipse.equinox.p2.native' version='1.0.0'/>
   </unit>
-  <unit id='toolingcom.prolan.tycho.releaseId.configuration' version='1.0.0.201807311536'>
-    <provides size='1'>
-      <provided namespace='org.eclipse.equinox.p2.iu' name='toolingcom.prolan.tycho.releaseId.configuration' version='1.0.0.201807311536'/>
-    </provides>
-    <requires size='8'>
-      <required namespace='org.eclipse.equinox.p2.iu' name='toolingwin32.win32.x86_64org.eclipse.equinox.ds' range='[1.0.0.201807311536,1.0.0.201807311536]'>
-        <filter>
-          (&amp;(osgi.arch=x86_64)(osgi.os=win32)(osgi.ws=win32))
-        </filter>
-      </required>
-      <required namespace='org.eclipse.equinox.p2.iu' name='toolingwin32.win32.x86_64org.eclipse.equinox.event' range='[1.0.0.201807311536,1.0.0.201807311536]'>
-        <filter>
-          (&amp;(osgi.arch=x86_64)(osgi.os=win32)(osgi.ws=win32))
-        </filter>
-      </required>
-      <required namespace='org.eclipse.equinox.p2.iu' name='toolingwin32.win32.x86_64org.eclipse.core.runtime' range='[1.0.0.201807311536,1.0.0.201807311536]'>
-        <filter>
-          (&amp;(osgi.arch=x86_64)(osgi.os=win32)(osgi.ws=win32))
-        </filter>
-      </required>
-      <required namespace='org.eclipse.equinox.p2.iu' name='toolingcom.prolan.tycho.releaseId.config.win32.win32.x86' range='[1.0.0.201807311536,1.0.0.201807311536]'>
-        <filter>
-          (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
-        </filter>
-      </required>
-      <required namespace='org.eclipse.equinox.p2.iu' name='toolingcom.prolan.tycho.releaseId.config.win32.win32.x86_64' range='[1.0.0.201807311536,1.0.0.201807311536]'>
-        <filter>
-          (&amp;(osgi.arch=x86_64)(osgi.os=win32)(osgi.ws=win32))
-        </filter>
-      </required>
-      <required namespace='org.eclipse.equinox.p2.iu' name='toolingwin32.win32.x86org.eclipse.core.runtime' range='[1.0.0.201807311536,1.0.0.201807311536]'>
-        <filter>
-          (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
-        </filter>
-      </required>
-      <required namespace='org.eclipse.equinox.p2.iu' name='toolingwin32.win32.x86org.eclipse.equinox.ds' range='[1.0.0.201807311536,1.0.0.201807311536]'>
-        <filter>
-          (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
-        </filter>
-      </required>
-      <required namespace='org.eclipse.equinox.p2.iu' name='toolingwin32.win32.x86org.eclipse.equinox.event' range='[1.0.0.201807311536,1.0.0.201807311536]'>
-        <filter>
-          (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
-        </filter>
-      </required>
-    </requires>
-    <touchpoint id='null' version='0.0.0'/>
-  </unit>
-  <unit id='config.a.jre.javase' version='1.6.0' singleton='false'>
+  <unit id='config.a.jre.javase' version='10.0.0' singleton='false'>
     <hostRequirements size='1'>
-      <required namespace='org.eclipse.equinox.p2.iu' name='a.jre.javase' range='1.6.0'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='a.jre.javase' range='10.0.0'/>
     </hostRequirements>
     <properties size='1'>
       <property name='org.eclipse.equinox.p2.type.fragment' value='true'/>
     </properties>
     <provides size='1'>
-      <provided namespace='org.eclipse.equinox.p2.iu' name='config.a.jre.javase' version='1.6.0'/>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='config.a.jre.javase' version='10.0.0'/>
     </provides>
     <requires size='1'>
-      <required namespace='org.eclipse.equinox.p2.iu' name='a.jre.javase' range='1.6.0'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='a.jre.javase' range='10.0.0'/>
     </requires>
     <touchpoint id='org.eclipse.equinox.p2.native' version='1.0.0'/>
     <touchpointData size='1'>
       <instructions size='1'>
         <instruction key='install'>
 
+        </instruction>
+      </instructions>
+    </touchpointData>
+  </unit>
+  <unit id='tooling.org.eclipse.update.feature.default' version='1.0.0' singleton='false'>
+    <hostRequirements size='1'>
+      <required namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' range='0.0.0' optional='true' multiple='true' greedy='false'/>
+    </hostRequirements>
+    <properties size='1'>
+      <property name='org.eclipse.equinox.p2.type.fragment' value='true'/>
+    </properties>
+    <provides size='2'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='tooling.org.eclipse.update.feature.default' version='1.0.0'/>
+      <provided namespace='org.eclipse.equinox.p2.flavor' name='tooling' version='1.0.0'/>
+    </provides>
+    <requires size='1'>
+      <required namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' range='0.0.0' optional='true' multiple='true' greedy='false'/>
+    </requires>
+    <filter>
+      (org.eclipse.update.install.features=true)
+    </filter>
+    <touchpoint id='null' version='0.0.0'/>
+    <touchpointData size='1'>
+      <instructions size='2'>
+        <instruction key='uninstall'>
+          uninstallFeature(feature:${artifact},featureId:default,featureVersion:default)
+        </instruction>
+        <instruction key='install'>
+          installFeature(feature:${artifact},featureId:default,featureVersion:default)
         </instruction>
       </instructions>
     </touchpointData>
@@ -349,6 +333,287 @@
         </instruction>
       </instructions>
     </touchpointData>
+  </unit>
+  <unit id='toolingcom.prolan.tycho.releaseId.configuration' version='9.0.0'>
+    <provides size='1'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='toolingcom.prolan.tycho.releaseId.configuration' version='9.0.0'/>
+    </provides>
+    <requires size='4'>
+      <required namespace='org.eclipse.equinox.p2.iu' name='toolingwin32.win32.x86_64org.eclipse.equinox.ds' range='[9.0.0,9.0.0]'>
+        <filter>
+          (&amp;(osgi.arch=x86_64)(osgi.os=win32)(osgi.ws=win32))
+        </filter>
+      </required>
+      <required namespace='org.eclipse.equinox.p2.iu' name='toolingwin32.win32.x86_64org.eclipse.core.runtime' range='[9.0.0,9.0.0]'>
+        <filter>
+          (&amp;(osgi.arch=x86_64)(osgi.os=win32)(osgi.ws=win32))
+        </filter>
+      </required>
+      <required namespace='org.eclipse.equinox.p2.iu' name='toolingwin32.win32.x86_64org.eclipse.equinox.event' range='[9.0.0,9.0.0]'>
+        <filter>
+          (&amp;(osgi.arch=x86_64)(osgi.os=win32)(osgi.ws=win32))
+        </filter>
+      </required>
+      <required namespace='org.eclipse.equinox.p2.iu' name='toolingcom.prolan.tycho.releaseId.config.win32.win32.x86_64' range='[9.0.0,9.0.0]'>
+        <filter>
+          (&amp;(osgi.arch=x86_64)(osgi.os=win32)(osgi.ws=win32))
+        </filter>
+      </required>
+    </requires>
+    <touchpoint id='null' version='0.0.0'/>
+  </unit>
+  <unit id='a.jre.javase' version='9.0.0' singleton='false'>
+    <provides size='248'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='a.jre.javase' version='9.0.0'/>
+      <provided namespace='java.package' name='java.applet' version='0.0.0'/>
+      <provided namespace='java.package' name='java.awt' version='0.0.0'/>
+      <provided namespace='java.package' name='java.awt.color' version='0.0.0'/>
+      <provided namespace='java.package' name='java.awt.datatransfer' version='0.0.0'/>
+      <provided namespace='java.package' name='java.awt.desktop' version='0.0.0'/>
+      <provided namespace='java.package' name='java.awt.dnd' version='0.0.0'/>
+      <provided namespace='java.package' name='java.awt.event' version='0.0.0'/>
+      <provided namespace='java.package' name='java.awt.font' version='0.0.0'/>
+      <provided namespace='java.package' name='java.awt.geom' version='0.0.0'/>
+      <provided namespace='java.package' name='java.awt.im' version='0.0.0'/>
+      <provided namespace='java.package' name='java.awt.im.spi' version='0.0.0'/>
+      <provided namespace='java.package' name='java.awt.image' version='0.0.0'/>
+      <provided namespace='java.package' name='java.awt.image.renderable' version='0.0.0'/>
+      <provided namespace='java.package' name='java.awt.print' version='0.0.0'/>
+      <provided namespace='java.package' name='java.beans' version='0.0.0'/>
+      <provided namespace='java.package' name='java.beans.beancontext' version='0.0.0'/>
+      <provided namespace='java.package' name='java.io' version='0.0.0'/>
+      <provided namespace='java.package' name='java.lang' version='0.0.0'/>
+      <provided namespace='java.package' name='java.lang.annotation' version='0.0.0'/>
+      <provided namespace='java.package' name='java.lang.instrument' version='0.0.0'/>
+      <provided namespace='java.package' name='java.lang.invoke' version='0.0.0'/>
+      <provided namespace='java.package' name='java.lang.management' version='0.0.0'/>
+      <provided namespace='java.package' name='java.lang.module' version='0.0.0'/>
+      <provided namespace='java.package' name='java.lang.ref' version='0.0.0'/>
+      <provided namespace='java.package' name='java.lang.reflect' version='0.0.0'/>
+      <provided namespace='java.package' name='java.math' version='0.0.0'/>
+      <provided namespace='java.package' name='java.net' version='0.0.0'/>
+      <provided namespace='java.package' name='java.net.spi' version='0.0.0'/>
+      <provided namespace='java.package' name='java.nio' version='0.0.0'/>
+      <provided namespace='java.package' name='java.nio.channels' version='0.0.0'/>
+      <provided namespace='java.package' name='java.nio.channels.spi' version='0.0.0'/>
+      <provided namespace='java.package' name='java.nio.charset' version='0.0.0'/>
+      <provided namespace='java.package' name='java.nio.charset.spi' version='0.0.0'/>
+      <provided namespace='java.package' name='java.nio.file' version='0.0.0'/>
+      <provided namespace='java.package' name='java.nio.file.attribute' version='0.0.0'/>
+      <provided namespace='java.package' name='java.nio.file.spi' version='0.0.0'/>
+      <provided namespace='java.package' name='java.rmi' version='0.0.0'/>
+      <provided namespace='java.package' name='java.rmi.activation' version='0.0.0'/>
+      <provided namespace='java.package' name='java.rmi.dgc' version='0.0.0'/>
+      <provided namespace='java.package' name='java.rmi.registry' version='0.0.0'/>
+      <provided namespace='java.package' name='java.rmi.server' version='0.0.0'/>
+      <provided namespace='java.package' name='java.security' version='0.0.0'/>
+      <provided namespace='java.package' name='java.security.acl' version='0.0.0'/>
+      <provided namespace='java.package' name='java.security.cert' version='0.0.0'/>
+      <provided namespace='java.package' name='java.security.interfaces' version='0.0.0'/>
+      <provided namespace='java.package' name='java.security.spec' version='0.0.0'/>
+      <provided namespace='java.package' name='java.sql' version='0.0.0'/>
+      <provided namespace='java.package' name='java.text' version='0.0.0'/>
+      <provided namespace='java.package' name='java.text.spi' version='0.0.0'/>
+      <provided namespace='java.package' name='java.time' version='0.0.0'/>
+      <provided namespace='java.package' name='java.time.chrono' version='0.0.0'/>
+      <provided namespace='java.package' name='java.time.format' version='0.0.0'/>
+      <provided namespace='java.package' name='java.time.temporal' version='0.0.0'/>
+      <provided namespace='java.package' name='java.time.zone' version='0.0.0'/>
+      <provided namespace='java.package' name='java.util' version='0.0.0'/>
+      <provided namespace='java.package' name='java.util.concurrent' version='0.0.0'/>
+      <provided namespace='java.package' name='java.util.concurrent.atomic' version='0.0.0'/>
+      <provided namespace='java.package' name='java.util.concurrent.locks' version='0.0.0'/>
+      <provided namespace='java.package' name='java.util.function' version='0.0.0'/>
+      <provided namespace='java.package' name='java.util.jar' version='0.0.0'/>
+      <provided namespace='java.package' name='java.util.logging' version='0.0.0'/>
+      <provided namespace='java.package' name='java.util.prefs' version='0.0.0'/>
+      <provided namespace='java.package' name='java.util.regex' version='0.0.0'/>
+      <provided namespace='java.package' name='java.util.spi' version='0.0.0'/>
+      <provided namespace='java.package' name='java.util.stream' version='0.0.0'/>
+      <provided namespace='java.package' name='java.util.zip' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.accessibility' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.activation' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.activity' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.annotation' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.annotation.processing' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.crypto' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.crypto.interfaces' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.crypto.spec' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.imageio' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.imageio.event' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.imageio.metadata' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.imageio.plugins.bmp' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.imageio.plugins.jpeg' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.imageio.spi' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.imageio.stream' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.jws' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.jws.soap' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.lang.model' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.lang.model.element' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.lang.model.type' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.lang.model.util' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.management' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.management.loading' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.management.modelmbean' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.management.monitor' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.management.openmbean' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.management.relation' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.management.remote' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.management.remote.rmi' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.management.timer' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.naming' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.naming.directory' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.naming.event' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.naming.ldap' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.naming.spi' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.net' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.net.ssl' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.print' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.print.attribute' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.print.attribute.standard' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.print.event' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.rmi' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.rmi.CORBA' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.rmi.ssl' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.script' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.security.auth' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.security.auth.callback' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.security.auth.kerberos' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.security.auth.login' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.security.auth.spi' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.security.auth.x500' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.security.cert' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.security.sasl' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.sound.midi' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.sound.midi.spi' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.sound.sampled' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.sound.sampled.spi' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.sql' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.sql.rowset' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.sql.rowset.serial' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.sql.rowset.spi' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.swing' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.swing.border' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.swing.colorchooser' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.swing.event' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.swing.filechooser' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.swing.plaf' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.swing.plaf.basic' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.swing.plaf.metal' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.swing.plaf.multi' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.swing.plaf.nimbus' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.swing.plaf.synth' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.swing.table' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.swing.text' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.swing.text.html' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.swing.text.html.parser' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.swing.text.rtf' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.swing.tree' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.swing.undo' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.tools' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.transaction' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.transaction.xa' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.xml' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.xml.bind' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.xml.bind.annotation' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.xml.bind.annotation.adapters' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.xml.bind.attachment' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.xml.bind.helpers' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.xml.bind.util' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.xml.crypto' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.xml.crypto.dom' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.xml.crypto.dsig' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.xml.crypto.dsig.dom' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.xml.crypto.dsig.keyinfo' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.xml.crypto.dsig.spec' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.xml.datatype' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.xml.namespace' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.xml.parsers' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.xml.soap' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.xml.stream' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.xml.stream.events' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.xml.stream.util' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.xml.transform' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.xml.transform.dom' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.xml.transform.sax' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.xml.transform.stax' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.xml.transform.stream' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.xml.validation' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.xml.ws' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.xml.ws.handler' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.xml.ws.handler.soap' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.xml.ws.http' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.xml.ws.soap' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.xml.ws.spi' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.xml.ws.spi.http' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.xml.ws.wsaddressing' version='0.0.0'/>
+      <provided namespace='java.package' name='javax.xml.xpath' version='0.0.0'/>
+      <provided namespace='java.package' name='org.ietf.jgss' version='0.0.0'/>
+      <provided namespace='java.package' name='org.omg.CORBA' version='0.0.0'/>
+      <provided namespace='java.package' name='org.omg.CORBA_2_3' version='0.0.0'/>
+      <provided namespace='java.package' name='org.omg.CORBA_2_3.portable' version='0.0.0'/>
+      <provided namespace='java.package' name='org.omg.CORBA.DynAnyPackage' version='0.0.0'/>
+      <provided namespace='java.package' name='org.omg.CORBA.ORBPackage' version='0.0.0'/>
+      <provided namespace='java.package' name='org.omg.CORBA.portable' version='0.0.0'/>
+      <provided namespace='java.package' name='org.omg.CORBA.TypeCodePackage' version='0.0.0'/>
+      <provided namespace='java.package' name='org.omg.CosNaming' version='0.0.0'/>
+      <provided namespace='java.package' name='org.omg.CosNaming.NamingContextExtPackage' version='0.0.0'/>
+      <provided namespace='java.package' name='org.omg.CosNaming.NamingContextPackage' version='0.0.0'/>
+      <provided namespace='java.package' name='org.omg.Dynamic' version='0.0.0'/>
+      <provided namespace='java.package' name='org.omg.DynamicAny' version='0.0.0'/>
+      <provided namespace='java.package' name='org.omg.DynamicAny.DynAnyFactoryPackage' version='0.0.0'/>
+      <provided namespace='java.package' name='org.omg.DynamicAny.DynAnyPackage' version='0.0.0'/>
+      <provided namespace='java.package' name='org.omg.IOP' version='0.0.0'/>
+      <provided namespace='java.package' name='org.omg.IOP.CodecFactoryPackage' version='0.0.0'/>
+      <provided namespace='java.package' name='org.omg.IOP.CodecPackage' version='0.0.0'/>
+      <provided namespace='java.package' name='org.omg.Messaging' version='0.0.0'/>
+      <provided namespace='java.package' name='org.omg.PortableInterceptor' version='0.0.0'/>
+      <provided namespace='java.package' name='org.omg.PortableInterceptor.ORBInitInfoPackage' version='0.0.0'/>
+      <provided namespace='java.package' name='org.omg.PortableServer' version='0.0.0'/>
+      <provided namespace='java.package' name='org.omg.PortableServer.CurrentPackage' version='0.0.0'/>
+      <provided namespace='java.package' name='org.omg.PortableServer.POAManagerPackage' version='0.0.0'/>
+      <provided namespace='java.package' name='org.omg.PortableServer.POAPackage' version='0.0.0'/>
+      <provided namespace='java.package' name='org.omg.PortableServer.portable' version='0.0.0'/>
+      <provided namespace='java.package' name='org.omg.PortableServer.ServantLocatorPackage' version='0.0.0'/>
+      <provided namespace='java.package' name='org.omg.SendingContext' version='0.0.0'/>
+      <provided namespace='java.package' name='org.omg.stub.java.rmi' version='0.0.0'/>
+      <provided namespace='java.package' name='org.w3c.dom' version='0.0.0'/>
+      <provided namespace='java.package' name='org.w3c.dom.bootstrap' version='0.0.0'/>
+      <provided namespace='java.package' name='org.w3c.dom.css' version='0.0.0'/>
+      <provided namespace='java.package' name='org.w3c.dom.events' version='0.0.0'/>
+      <provided namespace='java.package' name='org.w3c.dom.html' version='0.0.0'/>
+      <provided namespace='java.package' name='org.w3c.dom.ls' version='0.0.0'/>
+      <provided namespace='java.package' name='org.w3c.dom.ranges' version='0.0.0'/>
+      <provided namespace='java.package' name='org.w3c.dom.stylesheets' version='0.0.0'/>
+      <provided namespace='java.package' name='org.w3c.dom.traversal' version='0.0.0'/>
+      <provided namespace='java.package' name='org.w3c.dom.views' version='0.0.0'/>
+      <provided namespace='java.package' name='org.w3c.dom.xpath' version='0.0.0'/>
+      <provided namespace='java.package' name='org.xml.sax' version='0.0.0'/>
+      <provided namespace='java.package' name='org.xml.sax.ext' version='0.0.0'/>
+      <provided namespace='java.package' name='org.xml.sax.helpers' version='0.0.0'/>
+      <provided namespace='osgi.ee' name='OSGi/Minimum' version='1.0.0'/>
+      <provided namespace='osgi.ee' name='OSGi/Minimum' version='1.1.0'/>
+      <provided namespace='osgi.ee' name='OSGi/Minimum' version='1.2.0'/>
+      <provided namespace='osgi.ee' name='JRE' version='1.0.0'/>
+      <provided namespace='osgi.ee' name='JRE' version='1.1.0'/>
+      <provided namespace='osgi.ee' name='JavaSE' version='1.0.0'/>
+      <provided namespace='osgi.ee' name='JavaSE' version='1.1.0'/>
+      <provided namespace='osgi.ee' name='JavaSE' version='1.2.0'/>
+      <provided namespace='osgi.ee' name='JavaSE' version='1.3.0'/>
+      <provided namespace='osgi.ee' name='JavaSE' version='1.4.0'/>
+      <provided namespace='osgi.ee' name='JavaSE' version='1.5.0'/>
+      <provided namespace='osgi.ee' name='JavaSE' version='1.6.0'/>
+      <provided namespace='osgi.ee' name='JavaSE' version='1.7.0'/>
+      <provided namespace='osgi.ee' name='JavaSE' version='1.8.0'/>
+      <provided namespace='osgi.ee' name='JavaSE' version='9.0.0'/>
+      <provided namespace='osgi.ee' name='JavaSE/compact1' version='1.8.0'/>
+      <provided namespace='osgi.ee' name='JavaSE/compact1' version='9.0.0'/>
+      <provided namespace='osgi.ee' name='JavaSE/compact2' version='1.8.0'/>
+      <provided namespace='osgi.ee' name='JavaSE/compact2' version='9.0.0'/>
+      <provided namespace='osgi.ee' name='JavaSE/compact3' version='1.8.0'/>
+      <provided namespace='osgi.ee' name='JavaSE/compact3' version='9.0.0'/>
+    </provides>
+    <touchpoint id='org.eclipse.equinox.p2.native' version='1.0.0'/>
   </unit>
   <unit id='tooling.osgi.bundle.default' version='1.0.0' singleton='false'>
     <hostRequirements size='1'>
@@ -382,79 +647,232 @@
       </instructions>
     </touchpointData>
   </unit>
-  <unit id='toolingwin32.win32.x86_64org.eclipse.equinox.event' version='1.0.0.201807311536' singleton='false'>
-    <hostRequirements size='2'>
-      <required namespace='osgi.bundle' name='org.eclipse.equinox.event' range='1.3.200.v20160324-1850'/>
-      <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
+  <unit id='config.a.jre.javase' version='9.0.0' singleton='false'>
+    <hostRequirements size='1'>
+      <required namespace='org.eclipse.equinox.p2.iu' name='a.jre.javase' range='9.0.0'/>
     </hostRequirements>
     <properties size='1'>
       <property name='org.eclipse.equinox.p2.type.fragment' value='true'/>
     </properties>
-    <provides size='2'>
-      <provided namespace='org.eclipse.equinox.p2.iu' name='toolingwin32.win32.x86_64org.eclipse.equinox.event' version='1.0.0.201807311536'/>
-      <provided namespace='org.eclipse.equinox.p2.flavor' name='toolingwin32.win32.x86_64' version='1.0.0'/>
+    <provides size='1'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='config.a.jre.javase' version='9.0.0'/>
     </provides>
-    <requires size='2'>
-      <required namespace='osgi.bundle' name='org.eclipse.equinox.event' range='1.3.200.v20160324-1850'/>
-      <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
+    <requires size='1'>
+      <required namespace='org.eclipse.equinox.p2.iu' name='a.jre.javase' range='9.0.0'/>
     </requires>
-    <filter>
-      (&amp;(osgi.arch=x86_64)(osgi.os=win32)(osgi.ws=win32))
-    </filter>
-    <touchpoint id='null' version='0.0.0'/>
+    <touchpoint id='org.eclipse.equinox.p2.native' version='1.0.0'/>
     <touchpointData size='1'>
-      <instructions size='4'>
-        <instruction key='uninstall'>
-          uninstallBundle(bundle:${artifact})
-        </instruction>
+      <instructions size='1'>
         <instruction key='install'>
-          installBundle(bundle:${artifact})
-        </instruction>
-        <instruction key='configure'>
-          setStartLevel(startLevel:3);markStarted(started: true);
-        </instruction>
-        <instruction key='unconfigure'>
-          setStartLevel(startLevel:-1);markStarted(started: false);
+
         </instruction>
       </instructions>
     </touchpointData>
   </unit>
-  <unit id='toolingwin32.win32.x86_64org.eclipse.core.runtime' version='1.0.0.201807311536' singleton='false'>
-    <hostRequirements size='2'>
-      <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='3.12.0.v20160606-1342'/>
-      <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
-    </hostRequirements>
-    <properties size='1'>
-      <property name='org.eclipse.equinox.p2.type.fragment' value='true'/>
-    </properties>
-    <provides size='2'>
-      <provided namespace='org.eclipse.equinox.p2.iu' name='toolingwin32.win32.x86_64org.eclipse.core.runtime' version='1.0.0.201807311536'/>
-      <provided namespace='org.eclipse.equinox.p2.flavor' name='toolingwin32.win32.x86_64' version='1.0.0'/>
+  <unit id='toolingcom.prolan.tycho.releaseId.application' version='9.0.0'>
+    <provides size='1'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='toolingcom.prolan.tycho.releaseId.application' version='9.0.0'/>
     </provides>
-    <requires size='2'>
-      <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='3.12.0.v20160606-1342'/>
-      <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
+    <requires size='5'>
+      <required namespace='org.eclipse.equinox.p2.iu' name='com.prolan.tycho.releaseId.executable.win32.win32.x86_64.TychoRelease' range='[9.0.0,9.0.0]'>
+        <filter>
+          (&amp;(osgi.arch=x86_64)(osgi.os=win32)(osgi.ws=win32))
+        </filter>
+      </required>
+      <required namespace='org.eclipse.equinox.p2.iu' name='com.prolan.tycho.releaseId.executable.win32.win32.x86_64' range='[9.0.0,9.0.0]'>
+        <filter>
+          (&amp;(osgi.arch=x86_64)(osgi.os=win32)(osgi.ws=win32))
+        </filter>
+      </required>
+      <required namespace='org.eclipse.equinox.p2.iu' name='toolingorg.eclipse.equinox.launcher.win32.win32.x86_64' range='[1.1.401.v20161122-1740,1.1.401.v20161122-1740]'>
+        <filter>
+          (&amp;(osgi.arch=x86_64)(osgi.os=win32)(osgi.ws=win32))
+        </filter>
+      </required>
+      <required namespace='org.eclipse.equinox.p2.iu' name='toolingorg.eclipse.equinox.launcher' range='[1.3.201.v20161025-1711,1.3.201.v20161025-1711]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='toolingcom.prolan.tycho.releaseId.executable.win32.win32.x86_64' range='[9.0.0,9.0.0]'>
+        <filter>
+          (&amp;(osgi.arch=x86_64)(osgi.os=win32)(osgi.ws=win32))
+        </filter>
+      </required>
+    </requires>
+    <touchpoint id='null' version='0.0.0'/>
+  </unit>
+  <unit id='com.prolan.tycho.releaseId.executable.win32.win32.x86_64.TychoRelease' version='9.0.0' singleton='false'>
+    <provides size='1'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='com.prolan.tycho.releaseId.executable.win32.win32.x86_64.TychoRelease' version='9.0.0'/>
+    </provides>
+    <filter>
+      (&amp;(osgi.arch=x86_64)(osgi.os=win32)(osgi.ws=win32))
+    </filter>
+    <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+    <touchpointData size='1'>
+      <instructions size='2'>
+        <instruction key='configure'>
+          setLauncherName(name:TychoRelease)
+        </instruction>
+        <instruction key='unconfigure'>
+          setLauncherName()
+        </instruction>
+      </instructions>
+    </touchpointData>
+  </unit>
+  <unit id='com.prolan.tycho.releaseId.executable.win32.win32.x86_64' version='9.0.0'>
+    <provides size='2'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='com.prolan.tycho.releaseId.executable.win32.win32.x86_64' version='9.0.0'/>
+      <provided namespace='toolingcom.prolan.tycho.releaseId' name='com.prolan.tycho.releaseId.executable' version='9.0.0'/>
+    </provides>
+    <requires size='1'>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.equinox.launcher.win32.win32.x86_64' range='0.0.0'>
+        <filter>
+          (&amp;(osgi.arch=x86_64)(osgi.os=win32)(osgi.ws=win32))
+        </filter>
+      </required>
     </requires>
     <filter>
       (&amp;(osgi.arch=x86_64)(osgi.os=win32)(osgi.ws=win32))
     </filter>
-    <touchpoint id='null' version='0.0.0'/>
-    <touchpointData size='1'>
-      <instructions size='4'>
-        <instruction key='uninstall'>
-          uninstallBundle(bundle:${artifact})
-        </instruction>
-        <instruction key='install'>
-          installBundle(bundle:${artifact})
-        </instruction>
-        <instruction key='configure'>
-          setStartLevel(startLevel:2);markStarted(started: true);
-        </instruction>
-        <instruction key='unconfigure'>
-          setStartLevel(startLevel:-1);markStarted(started: false);
-        </instruction>
-      </instructions>
-    </touchpointData>
+    <artifacts size='1'>
+      <artifact classifier='binary' id='com.prolan.tycho.releaseId.executable.win32.win32.x86_64' version='9.0.0'/>
+    </artifacts>
+    <touchpoint id='org.eclipse.equinox.p2.native' version='1.0.0'/>
+  </unit>
+  <unit id='com.prolan.tycho.releaseId' version='9.0.0'>
+    <update id='com.prolan.tycho.releaseId' range='0.0.0' severity='0'/>
+    <properties size='3'>
+      <property name='org.eclipse.equinox.p2.name' value='TychoRelease'/>
+      <property name='org.eclipse.equinox.p2.type.product' value='true'/>
+      <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+    </properties>
+    <provides size='1'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='com.prolan.tycho.releaseId' version='9.0.0'/>
+    </provides>
+    <requires size='95'>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.e4.ui.css.swt.theme' range='[0.10.100.v20160523-0836,0.10.100.v20160523-0836]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.e4.emf.xpath' range='[0.1.200.v20160506-0804,0.1.200.v20160506-0804]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='tooling.org.eclipse.update.feature.default' range='[1.0.0,1.0.0]'>
+        <filter>
+          (org.eclipse.update.install.features=true)
+        </filter>
+      </required>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.navigator' range='[3.6.101.v20161006-1120,3.6.101.v20161006-1120]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.win32' range='[3.3.0.v20160505-1310,3.3.0.v20160505-1310]'>
+        <filter>
+          (osgi.ws=win32)
+        </filter>
+      </required>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.text' range='[3.6.0.v20160503-1849,3.6.0.v20160503-1849]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='com.google.guava' range='[15.0.0.v201403281430,15.0.0.v201403281430]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.equinox.p2.metadata' range='[2.3.100.v20160427-2220,2.3.100.v20160427-2220]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='com.google.inject' range='[3.0.0.v201605172100,3.0.0.v201605172100]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.osgi.compatibility.state' range='[1.0.200.v20160504-1419,1.0.200.v20160504-1419]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='toolingcom.prolan.tycho.releaseId.configuration' range='[9.0.0,9.0.0]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.w3c.dom.events' range='[3.0.0.draft20060413_v201105210656,3.0.0.draft20060413_v201105210656]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.apache.commons.jxpath' range='[1.3.0.v200911051830,1.3.0.v200911051830]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.e4.ui.services' range='[1.2.100.v20160506-0759,1.2.100.v20160506-0759]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.equinox.ds.source' range='[1.4.400.v20160226-2036,1.4.400.v20160226-2036]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='com.ibm.icu' range='[56.1.0.v201601250100,56.1.0.v201601250100]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.tukaani.xz' range='[1.3.0.v201308270617,1.3.0.v201308270617]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.gef' range='[3.11.0.201606061308,3.11.0.201606061308]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.core.databinding' range='[1.6.0.v20160412-0910,1.6.0.v20160412-0910]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.osgi.services' range='[3.5.100.v20160504-1419,3.5.100.v20160504-1419]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.e4.ui.widgets' range='[1.1.100.v20160506-0759,1.1.100.v20160506-0759]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.e4.core.di.annotations' range='[1.5.0.v20151127-1241,1.5.0.v20151127-1241]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.e4.ui.workbench.addons.swt' range='[1.2.101.v20170206-1129,1.2.101.v20170206-1129]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='com.prolan.tycho.release3' range='[1.1.16.201808021733,1.1.16.201808021733]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.osgi' range='[3.11.3.v20170209-1843,3.11.3.v20170209-1843]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.w3c.css.sac' range='[1.3.1.v200903091627,1.3.1.v200903091627]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.core.databinding.observable' range='[1.6.0.v20160511-1747,1.6.0.v20160511-1747]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.equinox.registry' range='[3.6.100.v20160223-2218,3.6.100.v20160223-2218]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='javax.inject' range='[1.0.0.v20091030,1.0.0.v20091030]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.swt' range='[3.105.3.v20170228-0512,3.105.3.v20170228-0512]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.views.properties.tabbed' range='[3.7.0.v20160310-0903,3.7.0.v20160310-0903]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.equinox.security.win32.x86_64' range='[1.0.100.v20130327-1442,1.0.100.v20130327-1442]'>
+        <filter>
+          (&amp;(osgi.arch=x86_64)(osgi.os=win32))
+        </filter>
+      </required>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.swt.win32.win32.x86_64' range='[3.105.3.v20170228-0512,3.105.3.v20170228-0512]'>
+        <filter>
+          (&amp;(osgi.arch=x86_64)(osgi.os=win32)(osgi.ws=win32))
+        </filter>
+      </required>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.e4.ui.workbench.renderers.swt' range='[0.14.1.v20170117-1415,0.14.1.v20170117-1415]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.help' range='[3.7.0.v20160602-1307,3.7.0.v20160602-1307]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.e4.core.di.extensions' range='[0.14.0.v20160211-1614,0.14.0.v20160211-1614]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.core.runtime' range='[3.12.0.v20160606-1342,3.12.0.v20160606-1342]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.w3c.dom.svg' range='[1.1.0.v201011041433,1.1.0.v201011041433]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.e4.core.commands' range='[0.11.100.v20160506-0804,0.11.100.v20160506-0804]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.core.resources.win32.x86_64' range='[3.5.0.v20140124-1940,3.5.0.v20140124-1940]'>
+        <filter>
+          (&amp;(osgi.arch=x86_64)(osgi.os=win32))
+        </filter>
+      </required>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.core.expressions' range='[3.5.100.v20160418-1621,3.5.100.v20160418-1621]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.core.resources' range='[3.11.1.v20161107-2032,3.11.1.v20161107-2032]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.core.jobs' range='[3.8.0.v20160509-0411,3.8.0.v20160509-0411]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.e4.ui.css.core' range='[0.12.1.v20161114-0210,0.12.1.v20161114-0210]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.core.commands' range='[3.8.1.v20161221-1651,3.8.1.v20161221-1651]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.w3c.dom.smil' range='[1.0.1.v200903091627,1.0.1.v200903091627]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.ide' range='[3.12.3.v20170119-0935,3.12.3.v20170119-0935]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='com.prolan.tycho.release2' range='[1.1.16.201808021733,1.1.16.201808021733]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='javax.xml' range='[1.3.4.v201005080400,1.3.4.v201005080400]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.apache.log4j' range='[1.2.15.v201012070815,1.2.15.v201012070815]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.e4.core.di' range='[1.6.1.v20160712-0927,1.6.1.v20160712-0927]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='tooling.osgi.bundle.default' range='[1.0.0,1.0.0]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='toolingcom.prolan.tycho.releaseId.application' range='[9.0.0,9.0.0]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.workbench' range='[3.108.3.v20170216-1539,3.108.3.v20170216-1539]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.equinox.p2.metadata.repository' range='[1.2.300.v20160419-0834,1.2.300.v20160419-0834]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.core.contenttype' range='[3.5.100.v20160418-1621,3.5.100.v20160418-1621]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.core.databinding.property' range='[1.6.0.v20160427-0852,1.6.0.v20160427-0852]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.equinox.security' range='[1.2.200.v20150715-1528,1.2.200.v20150715-1528]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.platform' range='[4.6.3.v20170301-0400,4.6.3.v20170301-0400]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.apache.commons.logging' range='[1.1.1.v201101211721,1.1.1.v201101211721]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.e4.ui.workbench3' range='[0.13.100.v20160506-0759,0.13.100.v20160506-0759]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.e4.core.contexts' range='[1.5.1.v20170203-1100,1.5.1.v20170203-1100]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jface.text' range='[3.11.2.v20170220-1911,3.11.2.v20170220-1911]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.e4.ui.workbench.swt' range='[0.14.1.v20160829-0832,0.14.1.v20160829-0832]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.equinox.common' range='[3.8.0.v20160509-1230,3.8.0.v20160509-1230]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.equinox.event' range='[1.3.200.v20160324-1850,1.3.200.v20160324-1850]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui' range='[3.108.1.v20160929-1045,3.108.1.v20160929-1045]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.equinox.ds' range='[1.4.400.v20160226-2036,1.4.400.v20160226-2036]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='com.prolan.tycho.release1' range='[1.1.16.201808021733,1.1.16.201808021733]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jface' range='[3.12.2.v20170113-2113,3.12.2.v20170113-2113]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.equinox.bidi' range='[1.0.0.v20160307-1318,1.0.0.v20160307-1318]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jface.databinding' range='[1.8.1.v20161026-1531,1.8.1.v20161026-1531]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.e4.ui.di' range='[1.1.100.v20160506-0759,1.1.100.v20160506-0759]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.core.filesystem' range='[1.6.1.v20161113-2349,1.6.1.v20161113-2349]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.apache.batik.css' range='[1.7.0.v201011041433,1.7.0.v201011041433]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.apache.batik.util.gui' range='[1.7.0.v200903091627,1.7.0.v200903091627]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.apache.batik.util' range='[1.7.0.v201011041433,1.7.0.v201011041433]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.equinox.app' range='[1.3.400.v20150715-1528,1.3.400.v20150715-1528]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.core.filesystem.win32.x86_64' range='[1.4.0.v20140124-1940,1.4.0.v20140124-1940]'>
+        <filter>
+          (&amp;(osgi.arch=x86_64)(osgi.os=win32))
+        </filter>
+      </required>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.forms' range='[3.7.1.v20161220-1635,3.7.1.v20161220-1635]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='tooling.source.default' range='[1.0.0,1.0.0]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.e4.ui.model.workbench' range='[1.2.0.v20160229-1459,1.2.0.v20160229-1459]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.equinox.p2.engine' range='[2.4.100.v20160419-0834,2.4.100.v20160419-0834]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.draw2d' range='[3.10.100.201606061308,3.10.100.201606061308]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.e4.core.services' range='[2.0.100.v20160509-1032,2.0.100.v20160509-1032]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.e4.ui.workbench' range='[1.4.0.v20160517-1624,1.4.0.v20160517-1624]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.equinox.p2.repository' range='[2.3.200.v20160421-0324,2.3.200.v20160421-0324]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.intro' range='[3.5.2.v20161116-1147,3.5.2.v20161116-1147]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.e4.ui.bindings' range='[0.11.100.v20160509-1025,0.11.100.v20160509-1025]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.views' range='[3.8.102.v20170111-0801,3.8.102.v20170111-0801]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.equinox.util' range='[1.0.500.v20130404-1337,1.0.500.v20130404-1337]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.e4.ui.css.swt' range='[0.12.100.v20160517-1505,0.12.100.v20160517-1505]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.equinox.p2.core' range='[2.4.100.v20160419-0834,2.4.100.v20160419-0834]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.equinox.preferences' range='[3.6.1.v20160815-1406,3.6.1.v20160815-1406]'/>
+      <required namespace='osgi.ee' name='JavaSE' range='[1.8.0,1.8.0]'>
+        <filter>
+          (osgi.os=win32)
+        </filter>
+      </required>
+    </requires>
+    <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
   </unit>
   <unit id='toolingorg.eclipse.equinox.launcher.win32.win32.x86_64' version='1.1.401.v20161122-1740' singleton='false'>
     <hostRequirements size='2'>
@@ -493,45 +911,79 @@
       </instructions>
     </touchpointData>
   </unit>
-  <unit id='toolingcom.prolan.tycho.releaseId.config.win32.win32.x86' version='1.0.0.201807311536' singleton='false'>
+  <unit id='toolingwin32.win32.x86_64org.eclipse.equinox.ds' version='9.0.0' singleton='false'>
+    <hostRequirements size='2'>
+      <required namespace='osgi.bundle' name='org.eclipse.equinox.ds' range='1.4.400.v20160226-2036'/>
+      <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
+    </hostRequirements>
+    <properties size='1'>
+      <property name='org.eclipse.equinox.p2.type.fragment' value='true'/>
+    </properties>
     <provides size='2'>
-      <provided namespace='org.eclipse.equinox.p2.iu' name='toolingcom.prolan.tycho.releaseId.config.win32.win32.x86' version='1.0.0.201807311536'/>
-      <provided namespace='toolingcom.prolan.tycho.releaseId' name='com.prolan.tycho.releaseId.config' version='1.0.0.201807311536'/>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='toolingwin32.win32.x86_64org.eclipse.equinox.ds' version='9.0.0'/>
+      <provided namespace='org.eclipse.equinox.p2.flavor' name='toolingwin32.win32.x86_64' version='1.0.0'/>
     </provides>
+    <requires size='2'>
+      <required namespace='osgi.bundle' name='org.eclipse.equinox.ds' range='1.4.400.v20160226-2036'/>
+      <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
+    </requires>
     <filter>
-      (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+      (&amp;(osgi.arch=x86_64)(osgi.os=win32)(osgi.ws=win32))
     </filter>
-    <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+    <touchpoint id='null' version='0.0.0'/>
     <touchpointData size='1'>
-      <instructions size='2'>
+      <instructions size='4'>
+        <instruction key='uninstall'>
+          uninstallBundle(bundle:${artifact})
+        </instruction>
+        <instruction key='install'>
+          installBundle(bundle:${artifact})
+        </instruction>
         <instruction key='configure'>
-          setProgramProperty(propName:eclipse.product,propValue:com.prolan.tycho.release);setProgramProperty(propName:eclipse.application,propValue:com.prolan.tycho.release.application);
+          setStartLevel(startLevel:3);markStarted(started: true);
         </instruction>
         <instruction key='unconfigure'>
-          setProgramProperty(propName:eclipse.product,propValue:);setProgramProperty(propName:eclipse.application,propValue:);
+          setStartLevel(startLevel:-1);markStarted(started: false);
         </instruction>
       </instructions>
     </touchpointData>
   </unit>
-  <unit id='com.prolan.tycho.releaseId.executable.win32.win32.x86' version='1.0.0.201807311536'>
+  <unit id='toolingwin32.win32.x86_64org.eclipse.core.runtime' version='9.0.0' singleton='false'>
+    <hostRequirements size='2'>
+      <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='3.12.0.v20160606-1342'/>
+      <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
+    </hostRequirements>
+    <properties size='1'>
+      <property name='org.eclipse.equinox.p2.type.fragment' value='true'/>
+    </properties>
     <provides size='2'>
-      <provided namespace='org.eclipse.equinox.p2.iu' name='com.prolan.tycho.releaseId.executable.win32.win32.x86' version='1.0.0.201807311536'/>
-      <provided namespace='toolingcom.prolan.tycho.releaseId' name='com.prolan.tycho.releaseId.executable' version='1.0.0.201807311536'/>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='toolingwin32.win32.x86_64org.eclipse.core.runtime' version='9.0.0'/>
+      <provided namespace='org.eclipse.equinox.p2.flavor' name='toolingwin32.win32.x86_64' version='1.0.0'/>
     </provides>
-    <requires size='1'>
-      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.equinox.launcher.win32.win32.x86' range='0.0.0'>
-        <filter>
-          (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
-        </filter>
-      </required>
+    <requires size='2'>
+      <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='3.12.0.v20160606-1342'/>
+      <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
     </requires>
     <filter>
-      (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+      (&amp;(osgi.arch=x86_64)(osgi.os=win32)(osgi.ws=win32))
     </filter>
-    <artifacts size='1'>
-      <artifact classifier='binary' id='com.prolan.tycho.releaseId.executable.win32.win32.x86' version='1.0.0.201807311536'/>
-    </artifacts>
-    <touchpoint id='org.eclipse.equinox.p2.native' version='1.0.0'/>
+    <touchpoint id='null' version='0.0.0'/>
+    <touchpointData size='1'>
+      <instructions size='4'>
+        <instruction key='uninstall'>
+          uninstallBundle(bundle:${artifact})
+        </instruction>
+        <instruction key='install'>
+          installBundle(bundle:${artifact})
+        </instruction>
+        <instruction key='configure'>
+          setStartLevel(startLevel:2);markStarted(started: true);
+        </instruction>
+        <instruction key='unconfigure'>
+          setStartLevel(startLevel:-1);markStarted(started: false);
+        </instruction>
+      </instructions>
+    </touchpointData>
   </unit>
   <unit id='toolingorg.eclipse.equinox.launcher' version='1.3.201.v20161025-1711' singleton='false'>
     <hostRequirements size='2'>
@@ -567,7 +1019,7 @@
       </instructions>
     </touchpointData>
   </unit>
-  <unit id='toolingwin32.win32.x86org.eclipse.equinox.event' version='1.0.0.201807311536' singleton='false'>
+  <unit id='toolingwin32.win32.x86_64org.eclipse.equinox.event' version='9.0.0' singleton='false'>
     <hostRequirements size='2'>
       <required namespace='osgi.bundle' name='org.eclipse.equinox.event' range='1.3.200.v20160324-1850'/>
       <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
@@ -576,96 +1028,11 @@
       <property name='org.eclipse.equinox.p2.type.fragment' value='true'/>
     </properties>
     <provides size='2'>
-      <provided namespace='org.eclipse.equinox.p2.iu' name='toolingwin32.win32.x86org.eclipse.equinox.event' version='1.0.0.201807311536'/>
-      <provided namespace='org.eclipse.equinox.p2.flavor' name='toolingwin32.win32.x86' version='1.0.0'/>
-    </provides>
-    <requires size='2'>
-      <required namespace='osgi.bundle' name='org.eclipse.equinox.event' range='1.3.200.v20160324-1850'/>
-      <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
-    </requires>
-    <filter>
-      (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
-    </filter>
-    <touchpoint id='null' version='0.0.0'/>
-    <touchpointData size='1'>
-      <instructions size='4'>
-        <instruction key='uninstall'>
-          uninstallBundle(bundle:${artifact})
-        </instruction>
-        <instruction key='install'>
-          installBundle(bundle:${artifact})
-        </instruction>
-        <instruction key='configure'>
-          setStartLevel(startLevel:3);markStarted(started: true);
-        </instruction>
-        <instruction key='unconfigure'>
-          setStartLevel(startLevel:-1);markStarted(started: false);
-        </instruction>
-      </instructions>
-    </touchpointData>
-  </unit>
-  <unit id='com.prolan.tycho.releaseId' version='1.0.0.201807311536'>
-    <update id='com.prolan.tycho.releaseId' range='0.0.0' severity='0'/>
-    <properties size='3'>
-      <property name='org.eclipse.equinox.p2.name' value='TychoRelease'/>
-      <property name='org.eclipse.equinox.p2.type.product' value='true'/>
-      <property name='org.eclipse.equinox.p2.type.group' value='true'/>
-    </properties>
-    <provides size='1'>
-      <provided namespace='org.eclipse.equinox.p2.iu' name='com.prolan.tycho.releaseId' version='1.0.0.201807311536'/>
-    </provides>
-    <requires size='10'>
-      <required namespace='org.eclipse.equinox.p2.iu' name='com.prolan.tycho.release1' range='[1.0.0.201807311536,1.0.0.201807311536]'/>
-      <required namespace='org.eclipse.equinox.p2.iu' name='com.prolan.tycho.release3' range='[1.0.0.201807311536,1.0.0.201807311536]'/>
-      <required namespace='org.eclipse.equinox.p2.iu' name='com.prolan.tycho.release2' range='[1.0.0.201807311536,1.0.0.201807311536]'/>
-      <required namespace='org.eclipse.equinox.p2.iu' name='tooling.org.eclipse.update.feature.default' range='[1.0.0,1.0.0]'>
-        <filter>
-          (org.eclipse.update.install.features=true)
-        </filter>
-      </required>
-      <required namespace='org.eclipse.equinox.p2.iu' name='toolingcom.prolan.tycho.releaseId.application' range='[1.0.0.201807311536,1.0.0.201807311536]'/>
-      <required namespace='org.eclipse.equinox.p2.iu' name='a.jre.javase' range='[1.6.0,1.6.0]'/>
-      <required namespace='org.eclipse.equinox.p2.iu' name='toolingcom.prolan.tycho.releaseId.configuration' range='[1.0.0.201807311536,1.0.0.201807311536]'/>
-      <required namespace='org.eclipse.equinox.p2.iu' name='config.a.jre.javase' range='[1.6.0,1.6.0]'/>
-      <required namespace='org.eclipse.equinox.p2.iu' name='tooling.source.default' range='[1.0.0,1.0.0]'/>
-      <required namespace='org.eclipse.equinox.p2.iu' name='tooling.osgi.bundle.default' range='[1.0.0,1.0.0]'/>
-    </requires>
-    <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
-  </unit>
-  <unit id='com.prolan.tycho.releaseId.executable.win32.win32.x86_64' version='1.0.0.201807311536'>
-    <provides size='2'>
-      <provided namespace='org.eclipse.equinox.p2.iu' name='com.prolan.tycho.releaseId.executable.win32.win32.x86_64' version='1.0.0.201807311536'/>
-      <provided namespace='toolingcom.prolan.tycho.releaseId' name='com.prolan.tycho.releaseId.executable' version='1.0.0.201807311536'/>
-    </provides>
-    <requires size='1'>
-      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.equinox.launcher.win32.win32.x86_64' range='0.0.0'>
-        <filter>
-          (&amp;(osgi.arch=x86_64)(osgi.os=win32)(osgi.ws=win32))
-        </filter>
-      </required>
-    </requires>
-    <filter>
-      (&amp;(osgi.arch=x86_64)(osgi.os=win32)(osgi.ws=win32))
-    </filter>
-    <artifacts size='1'>
-      <artifact classifier='binary' id='com.prolan.tycho.releaseId.executable.win32.win32.x86_64' version='1.0.0.201807311536'/>
-    </artifacts>
-    <touchpoint id='org.eclipse.equinox.p2.native' version='1.0.0'/>
-  </unit>
-  <unit id='toolingwin32.win32.x86_64org.eclipse.equinox.ds' version='1.0.0.201807311536' singleton='false'>
-    <hostRequirements size='2'>
-      <required namespace='osgi.bundle' name='org.eclipse.equinox.ds' range='1.4.400.v20160226-2036'/>
-      <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
-    </hostRequirements>
-    <properties size='1'>
-      <property name='org.eclipse.equinox.p2.type.fragment' value='true'/>
-    </properties>
-    <provides size='2'>
-      <provided namespace='org.eclipse.equinox.p2.iu' name='toolingwin32.win32.x86_64org.eclipse.equinox.ds' version='1.0.0.201807311536'/>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='toolingwin32.win32.x86_64org.eclipse.equinox.event' version='9.0.0'/>
       <provided namespace='org.eclipse.equinox.p2.flavor' name='toolingwin32.win32.x86_64' version='1.0.0'/>
     </provides>
     <requires size='2'>
-      <required namespace='osgi.bundle' name='org.eclipse.equinox.ds' range='1.4.400.v20160226-2036'/>
+      <required namespace='osgi.bundle' name='org.eclipse.equinox.event' range='1.3.200.v20160324-1850'/>
       <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
     </requires>
     <filter>
@@ -689,74 +1056,18 @@
       </instructions>
     </touchpointData>
   </unit>
-  <unit id='toolingorg.eclipse.equinox.launcher.win32.win32.x86' version='1.1.401.v20161122-1740' singleton='false'>
-    <hostRequirements size='2'>
-      <required namespace='osgi.bundle' name='org.eclipse.equinox.launcher.win32.win32.x86' range='1.1.401.v20161122-1740'/>
-      <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
-    </hostRequirements>
-    <properties size='1'>
-      <property name='org.eclipse.equinox.p2.type.fragment' value='true'/>
-    </properties>
-    <provides size='2'>
-      <provided namespace='org.eclipse.equinox.p2.iu' name='toolingorg.eclipse.equinox.launcher.win32.win32.x86' version='1.1.401.v20161122-1740'/>
-      <provided namespace='org.eclipse.equinox.p2.flavor' name='tooling' version='1.0.0'/>
-    </provides>
-    <requires size='2'>
-      <required namespace='osgi.bundle' name='org.eclipse.equinox.launcher.win32.win32.x86' range='1.1.401.v20161122-1740'/>
-      <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
-    </requires>
-    <filter>
-      (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
-    </filter>
-    <touchpoint id='null' version='0.0.0'/>
-    <touchpointData size='1'>
-      <instructions size='4'>
-        <instruction key='uninstall'>
-          uninstallBundle(bundle:${artifact})
-        </instruction>
-        <instruction key='install'>
-          installBundle(bundle:${artifact})
-        </instruction>
-        <instruction key='configure'>
-          addProgramArg(programArg:--launcher.library);addProgramArg(programArg:@artifact);
-        </instruction>
-        <instruction key='unconfigure'>
-          removeProgramArg(programArg:--launcher.library);removeProgramArg(programArg:@artifact);
-        </instruction>
-      </instructions>
-    </touchpointData>
-  </unit>
-  <unit id='com.prolan.tycho.releaseId.executable.win32.win32.x86.TychoRelease' version='1.0.0.201807311536' singleton='false'>
-    <provides size='1'>
-      <provided namespace='org.eclipse.equinox.p2.iu' name='com.prolan.tycho.releaseId.executable.win32.win32.x86.TychoRelease' version='1.0.0.201807311536'/>
-    </provides>
-    <filter>
-      (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
-    </filter>
-    <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
-    <touchpointData size='1'>
-      <instructions size='2'>
-        <instruction key='configure'>
-          setLauncherName(name:TychoRelease)
-        </instruction>
-        <instruction key='unconfigure'>
-          setLauncherName()
-        </instruction>
-      </instructions>
-    </touchpointData>
-  </unit>
-  <unit id='toolingcom.prolan.tycho.releaseId.executable.win32.win32.x86_64' version='1.0.0.201807311536' singleton='false'>
+  <unit id='toolingcom.prolan.tycho.releaseId.executable.win32.win32.x86_64' version='9.0.0' singleton='false'>
     <hostRequirements size='1'>
-      <required namespace='org.eclipse.equinox.p2.iu' name='com.prolan.tycho.releaseId.executable.win32.win32.x86_64' range='[1.0.0.201807311536,1.0.0.201807311536]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='com.prolan.tycho.releaseId.executable.win32.win32.x86_64' range='[9.0.0,9.0.0]'/>
     </hostRequirements>
     <properties size='1'>
       <property name='org.eclipse.equinox.p2.type.fragment' value='true'/>
     </properties>
     <provides size='1'>
-      <provided namespace='org.eclipse.equinox.p2.iu' name='toolingcom.prolan.tycho.releaseId.executable.win32.win32.x86_64' version='1.0.0.201807311536'/>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='toolingcom.prolan.tycho.releaseId.executable.win32.win32.x86_64' version='9.0.0'/>
     </provides>
     <requires size='1'>
-      <required namespace='org.eclipse.equinox.p2.iu' name='com.prolan.tycho.releaseId.executable.win32.win32.x86_64' range='[1.0.0.201807311536,1.0.0.201807311536]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='com.prolan.tycho.releaseId.executable.win32.win32.x86_64' range='[9.0.0,9.0.0]'/>
     </requires>
     <filter>
       (&amp;(osgi.arch=x86_64)(osgi.os=win32)(osgi.ws=win32))
@@ -773,38 +1084,10 @@
       </instructions>
     </touchpointData>
   </unit>
-  <unit id='toolingcom.prolan.tycho.releaseId.executable.win32.win32.x86' version='1.0.0.201807311536' singleton='false'>
-    <hostRequirements size='1'>
-      <required namespace='org.eclipse.equinox.p2.iu' name='com.prolan.tycho.releaseId.executable.win32.win32.x86' range='[1.0.0.201807311536,1.0.0.201807311536]'/>
-    </hostRequirements>
-    <properties size='1'>
-      <property name='org.eclipse.equinox.p2.type.fragment' value='true'/>
-    </properties>
-    <provides size='1'>
-      <provided namespace='org.eclipse.equinox.p2.iu' name='toolingcom.prolan.tycho.releaseId.executable.win32.win32.x86' version='1.0.0.201807311536'/>
-    </provides>
-    <requires size='1'>
-      <required namespace='org.eclipse.equinox.p2.iu' name='com.prolan.tycho.releaseId.executable.win32.win32.x86' range='[1.0.0.201807311536,1.0.0.201807311536]'/>
-    </requires>
-    <filter>
-      (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
-    </filter>
-    <touchpoint id='org.eclipse.equinox.p2.native' version='1.0.0'/>
-    <touchpointData size='1'>
-      <instructions size='2'>
-        <instruction key='uninstall'>
-          cleanupzip(source:@artifact, target:${installFolder});
-        </instruction>
-        <instruction key='install'>
-          unzip(source:@artifact, target:${installFolder});
-        </instruction>
-      </instructions>
-    </touchpointData>
-  </unit>
-  <unit id='toolingcom.prolan.tycho.releaseId.config.win32.win32.x86_64' version='1.0.0.201807311536' singleton='false'>
+  <unit id='toolingcom.prolan.tycho.releaseId.config.win32.win32.x86_64' version='9.0.0' singleton='false'>
     <provides size='2'>
-      <provided namespace='org.eclipse.equinox.p2.iu' name='toolingcom.prolan.tycho.releaseId.config.win32.win32.x86_64' version='1.0.0.201807311536'/>
-      <provided namespace='toolingcom.prolan.tycho.releaseId' name='com.prolan.tycho.releaseId.config' version='1.0.0.201807311536'/>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='toolingcom.prolan.tycho.releaseId.config.win32.win32.x86_64' version='9.0.0'/>
+      <provided namespace='toolingcom.prolan.tycho.releaseId' name='com.prolan.tycho.releaseId.config' version='9.0.0'/>
     </provides>
     <filter>
       (&amp;(osgi.arch=x86_64)(osgi.os=win32)(osgi.ws=win32))
@@ -813,103 +1096,10 @@
     <touchpointData size='1'>
       <instructions size='2'>
         <instruction key='configure'>
-          setProgramProperty(propName:eclipse.product,propValue:com.prolan.tycho.release);setProgramProperty(propName:eclipse.application,propValue:com.prolan.tycho.release.application);
+          setProgramProperty(propName:eclipse.product,propValue:com.prolan.tycho.release);setProgramProperty(propName:eclipse.application,propValue:org.eclipse.help.base.helpApplication);
         </instruction>
         <instruction key='unconfigure'>
           setProgramProperty(propName:eclipse.product,propValue:);setProgramProperty(propName:eclipse.application,propValue:);
-        </instruction>
-      </instructions>
-    </touchpointData>
-  </unit>
-  <unit id='com.prolan.tycho.releaseId.executable.win32.win32.x86_64.TychoRelease' version='1.0.0.201807311536' singleton='false'>
-    <provides size='1'>
-      <provided namespace='org.eclipse.equinox.p2.iu' name='com.prolan.tycho.releaseId.executable.win32.win32.x86_64.TychoRelease' version='1.0.0.201807311536'/>
-    </provides>
-    <filter>
-      (&amp;(osgi.arch=x86_64)(osgi.os=win32)(osgi.ws=win32))
-    </filter>
-    <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
-    <touchpointData size='1'>
-      <instructions size='2'>
-        <instruction key='configure'>
-          setLauncherName(name:TychoRelease)
-        </instruction>
-        <instruction key='unconfigure'>
-          setLauncherName()
-        </instruction>
-      </instructions>
-    </touchpointData>
-  </unit>
-  <unit id='toolingwin32.win32.x86org.eclipse.core.runtime' version='1.0.0.201807311536' singleton='false'>
-    <hostRequirements size='2'>
-      <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='3.12.0.v20160606-1342'/>
-      <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
-    </hostRequirements>
-    <properties size='1'>
-      <property name='org.eclipse.equinox.p2.type.fragment' value='true'/>
-    </properties>
-    <provides size='2'>
-      <provided namespace='org.eclipse.equinox.p2.iu' name='toolingwin32.win32.x86org.eclipse.core.runtime' version='1.0.0.201807311536'/>
-      <provided namespace='org.eclipse.equinox.p2.flavor' name='toolingwin32.win32.x86' version='1.0.0'/>
-    </provides>
-    <requires size='2'>
-      <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='3.12.0.v20160606-1342'/>
-      <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
-    </requires>
-    <filter>
-      (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
-    </filter>
-    <touchpoint id='null' version='0.0.0'/>
-    <touchpointData size='1'>
-      <instructions size='4'>
-        <instruction key='uninstall'>
-          uninstallBundle(bundle:${artifact})
-        </instruction>
-        <instruction key='install'>
-          installBundle(bundle:${artifact})
-        </instruction>
-        <instruction key='configure'>
-          setStartLevel(startLevel:2);markStarted(started: true);
-        </instruction>
-        <instruction key='unconfigure'>
-          setStartLevel(startLevel:-1);markStarted(started: false);
-        </instruction>
-      </instructions>
-    </touchpointData>
-  </unit>
-  <unit id='toolingwin32.win32.x86org.eclipse.equinox.ds' version='1.0.0.201807311536' singleton='false'>
-    <hostRequirements size='2'>
-      <required namespace='osgi.bundle' name='org.eclipse.equinox.ds' range='1.4.400.v20160226-2036'/>
-      <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
-    </hostRequirements>
-    <properties size='1'>
-      <property name='org.eclipse.equinox.p2.type.fragment' value='true'/>
-    </properties>
-    <provides size='2'>
-      <provided namespace='org.eclipse.equinox.p2.iu' name='toolingwin32.win32.x86org.eclipse.equinox.ds' version='1.0.0.201807311536'/>
-      <provided namespace='org.eclipse.equinox.p2.flavor' name='toolingwin32.win32.x86' version='1.0.0'/>
-    </provides>
-    <requires size='2'>
-      <required namespace='osgi.bundle' name='org.eclipse.equinox.ds' range='1.4.400.v20160226-2036'/>
-      <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
-    </requires>
-    <filter>
-      (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
-    </filter>
-    <touchpoint id='null' version='0.0.0'/>
-    <touchpointData size='1'>
-      <instructions size='4'>
-        <instruction key='uninstall'>
-          uninstallBundle(bundle:${artifact})
-        </instruction>
-        <instruction key='install'>
-          installBundle(bundle:${artifact})
-        </instruction>
-        <instruction key='configure'>
-          setStartLevel(startLevel:3);markStarted(started: true);
-        </instruction>
-        <instruction key='unconfigure'>
-          setStartLevel(startLevel:-1);markStarted(started: false);
         </instruction>
       </instructions>
     </touchpointData>

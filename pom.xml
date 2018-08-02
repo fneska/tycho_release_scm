@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.prolan.tycho</groupId>
 	<artifactId>com.prolan.tycho.root</artifactId>
-	<version>1.1.16</version>
+	<version>9.0.0</version>
 	<packaging>pom</packaging>
 
 	<scm>
@@ -98,38 +98,12 @@
 				</configuration>
 				<executions>
 					<execution>
-						<id>commit-version-to-git</id>
 						<phase>package</phase>
 						<goals>
 							<goal>checkin</goal>
-							
-						</goals>
-						<configuration>
-							
-							<basedir>./</basedir>
-							<message>[Add Version to git]</message>
-							<pushChanges>false</pushChanges>
-						</configuration>
-					</execution>
-					<execution>
-						<id>add-version-to-git</id>
-						<phase>package</phase>
-						<goals>
-							
 							<goal>tag</goal>
 						</goals>
-						<configuration>
-							<tag>v.1.1.1499</tag>
-							<basedir>./</basedir>
-							<excludes>com.prolan.tycho.release3</excludes>
-							<push>false</push>
-							<includes>versions/*</includes>
-							<message>[Add Version to git]</message>
-							<username>fneska</username>
-							<password>jamiNa73</password>
-							<addTimestamp>false</addTimestamp>
-							<connectionUrl>scm:git:[push=]https://github.com/fneska/tycho_release_scm</connectionUrl>
-						</configuration>
+						
 					</execution>
 				</executions>
 			</plugin>
@@ -141,6 +115,7 @@
 		<module>com.prolan.tycho.release3</module>
 		<module>com.prolan.tycho.release2</module>
 		<module>com.prolan.tycho.release1</module>
+		<module>com.prolan.tycho.release.product</module>
 		<!--<module>com.prolan.tycho.release.product</module> -->
 	</modules>
 </project>

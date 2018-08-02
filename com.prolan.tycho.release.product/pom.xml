@@ -3,13 +3,13 @@
 	<parent>
 		<groupId>com.prolan.tycho</groupId>
 		<artifactId>com.prolan.tycho.root</artifactId>
-		<version>1.0.0-SNAPSHOT</version>
+		<version>9.0.0</version>
 	</parent>
 
 	<groupId>com.prolan.tycho</groupId>
 	<artifactId>com.prolan.tycho.product</artifactId>
 	<packaging>eclipse-repository</packaging>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>9.0.0</version>
 
 	<build>
 		<plugins>
