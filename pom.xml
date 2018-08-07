@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.prolan.tycho</groupId>
 	<artifactId>com.prolan.tycho.root</artifactId>
-	<version>999.999.999</version>
+	<version>8.8.8</version>
 	<packaging>pom</packaging>
 
 	<scm>
