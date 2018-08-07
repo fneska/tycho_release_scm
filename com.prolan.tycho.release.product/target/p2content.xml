@@ -762,6 +762,7 @@
         </filter>
       </required>
       <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.text' range='[3.6.0.v20160503-1849,3.6.0.v20160503-1849]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='com.prolan.tycho.release2' range='[1.1.16.201808021907,1.1.16.201808021907]'/>
       <required namespace='org.eclipse.equinox.p2.iu' name='com.google.guava' range='[15.0.0.v201403281430,15.0.0.v201403281430]'/>
       <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.equinox.p2.metadata' range='[2.3.100.v20160427-2220,2.3.100.v20160427-2220]'/>
       <required namespace='org.eclipse.equinox.p2.iu' name='com.google.inject' range='[3.0.0.v201605172100,3.0.0.v201605172100]'/>
@@ -779,7 +780,6 @@
       <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.e4.ui.widgets' range='[1.1.100.v20160506-0759,1.1.100.v20160506-0759]'/>
       <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.e4.core.di.annotations' range='[1.5.0.v20151127-1241,1.5.0.v20151127-1241]'/>
       <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.e4.ui.workbench.addons.swt' range='[1.2.101.v20170206-1129,1.2.101.v20170206-1129]'/>
-      <required namespace='org.eclipse.equinox.p2.iu' name='com.prolan.tycho.release3' range='[1.1.16.201808021733,1.1.16.201808021733]'/>
       <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.osgi' range='[3.11.3.v20170209-1843,3.11.3.v20170209-1843]'/>
       <required namespace='org.eclipse.equinox.p2.iu' name='org.w3c.css.sac' range='[1.3.1.v200903091627,1.3.1.v200903091627]'/>
       <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.core.databinding.observable' range='[1.6.0.v20160511-1747,1.6.0.v20160511-1747]'/>
@@ -799,6 +799,7 @@
       </required>
       <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.e4.ui.workbench.renderers.swt' range='[0.14.1.v20170117-1415,0.14.1.v20170117-1415]'/>
       <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.help' range='[3.7.0.v20160602-1307,3.7.0.v20160602-1307]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='com.prolan.tycho.release1' range='[1.1.16.201808021907,1.1.16.201808021907]'/>
       <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.e4.core.di.extensions' range='[0.14.0.v20160211-1614,0.14.0.v20160211-1614]'/>
       <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.core.runtime' range='[3.12.0.v20160606-1342,3.12.0.v20160606-1342]'/>
       <required namespace='org.eclipse.equinox.p2.iu' name='org.w3c.dom.svg' range='[1.1.0.v201011041433,1.1.0.v201011041433]'/>
@@ -815,7 +816,6 @@
       <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.core.commands' range='[3.8.1.v20161221-1651,3.8.1.v20161221-1651]'/>
       <required namespace='org.eclipse.equinox.p2.iu' name='org.w3c.dom.smil' range='[1.0.1.v200903091627,1.0.1.v200903091627]'/>
       <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.ide' range='[3.12.3.v20170119-0935,3.12.3.v20170119-0935]'/>
-      <required namespace='org.eclipse.equinox.p2.iu' name='com.prolan.tycho.release2' range='[1.1.16.201808021733,1.1.16.201808021733]'/>
       <required namespace='org.eclipse.equinox.p2.iu' name='javax.xml' range='[1.3.4.v201005080400,1.3.4.v201005080400]'/>
       <required namespace='org.eclipse.equinox.p2.iu' name='org.apache.log4j' range='[1.2.15.v201012070815,1.2.15.v201012070815]'/>
       <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.e4.core.di' range='[1.6.1.v20160712-0927,1.6.1.v20160712-0927]'/>
@@ -836,12 +836,12 @@
       <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.equinox.event' range='[1.3.200.v20160324-1850,1.3.200.v20160324-1850]'/>
       <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui' range='[3.108.1.v20160929-1045,3.108.1.v20160929-1045]'/>
       <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.equinox.ds' range='[1.4.400.v20160226-2036,1.4.400.v20160226-2036]'/>
-      <required namespace='org.eclipse.equinox.p2.iu' name='com.prolan.tycho.release1' range='[1.1.16.201808021733,1.1.16.201808021733]'/>
       <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jface' range='[3.12.2.v20170113-2113,3.12.2.v20170113-2113]'/>
       <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.equinox.bidi' range='[1.0.0.v20160307-1318,1.0.0.v20160307-1318]'/>
       <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jface.databinding' range='[1.8.1.v20161026-1531,1.8.1.v20161026-1531]'/>
       <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.e4.ui.di' range='[1.1.100.v20160506-0759,1.1.100.v20160506-0759]'/>
       <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.core.filesystem' range='[1.6.1.v20161113-2349,1.6.1.v20161113-2349]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='com.prolan.tycho.release3' range='[1.1.16.201808021907,1.1.16.201808021907]'/>
       <required namespace='org.eclipse.equinox.p2.iu' name='org.apache.batik.css' range='[1.7.0.v201011041433,1.7.0.v201011041433]'/>
       <required namespace='org.eclipse.equinox.p2.iu' name='org.apache.batik.util.gui' range='[1.7.0.v200903091627,1.7.0.v200903091627]'/>
       <required namespace='org.eclipse.equinox.p2.iu' name='org.apache.batik.util' range='[1.7.0.v201011041433,1.7.0.v201011041433]'/>
@@ -1096,7 +1096,7 @@
     <touchpointData size='1'>
       <instructions size='2'>
         <instruction key='configure'>
-          setProgramProperty(propName:eclipse.product,propValue:com.prolan.tycho.release);setProgramProperty(propName:eclipse.application,propValue:org.eclipse.help.base.helpApplication);
+          setProgramProperty(propName:eclipse.product,propValue:com.prolan.tycho.release);setProgramProperty(propName:eclipse.application,propValue:com.prolan.tycho.release1.application);
         </instruction>
         <instruction key='unconfigure'>
           setProgramProperty(propName:eclipse.product,propValue:);setProgramProperty(propName:eclipse.application,propValue:);

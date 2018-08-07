@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?artifactRepository version='1.1.0'?>
 <artifacts size='1'>
-  <artifact classifier='osgi.bundle' id='com.prolan.tycho.release2' version='1.1.16.201808021733'>
+  <artifact classifier='osgi.bundle' id='com.prolan.tycho.release2' version='1.1.16.201808071337'>
     <properties size='5'>
       <property name='artifact.size' value='2578'/>
       <property name='download.size' value='2578'/>

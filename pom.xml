@@ -88,6 +88,10 @@
 				<version>1.2.0</version>
 			</plugin>
 
+
+		</plugins>
+		<pluginManagement>
+		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-scm-plugin</artifactId>
@@ -106,16 +110,14 @@
 						
 					</execution>
 				</executions>
-			</plugin>
-
-		</plugins>
+			</plugin></plugins>
+		</pluginManagement>
 	</build>
 
 	<modules>
 		<module>com.prolan.tycho.release3</module>
 		<module>com.prolan.tycho.release2</module>
 		<module>com.prolan.tycho.release1</module>
-		<module>com.prolan.tycho.release.product</module>
 		<!--<module>com.prolan.tycho.release.product</module> -->
 	</modules>
 </project>
