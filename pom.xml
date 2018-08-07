@@ -2,15 +2,12 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.prolan.tycho</groupId>
 	<artifactId>com.prolan.tycho.root</artifactId>
-	<version>99.99.99</version>
+	<version>999.999.999</version>
 	<packaging>pom</packaging>
 
 	<scm>
-		<connection>scm:git:https://github.com/fneska/tycho_release_scm</connection>
-		<developerConnection>scm:git:https://github.com/fneska/tycho_release_scm</developerConnection>
-		<tag>HEAD</tag>
-		<url>https://github.com/fneska/tycho_release_scm</url>
-
+		<connection>scm:git:https://git1.prolan.hu/PRORIS-H/Tools/ProrisCAD.git</connection>
+		
 	</scm>
 
 	<distributionManagement>
