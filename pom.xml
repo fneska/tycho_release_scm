@@ -6,8 +6,7 @@
 	<packaging>pom</packaging>
 
 	<scm>
-		<connection>scm:git:https://git1.prolan.hu/PRORIS-H/Tools/ProrisCAD.git</connection>
-		
+		<connection>scm:git:https://github.com/fneska/tycho_release_scm</connection>
 	</scm>
 
 	<distributionManagement>
