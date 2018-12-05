@@ -102,6 +102,7 @@
 						<goals>
 							<goal>checkin</goal>
 							<goal>tag</goal>
+							<goal>check-local-modification</goal>
 						</goals>
 						
 					</execution>
