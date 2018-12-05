@@ -1,18 +1,18 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <units size='1'>
-  <unit id='com.prolan.tycho.release3' version='1.1.16.201808071337' singleton='false'>
-    <update id='com.prolan.tycho.release3' range='[0.0.0,1.1.16.201808071337)' severity='0'/>
+  <unit id='com.prolan.tycho.release3' version='999.999.999' singleton='false'>
+    <update id='com.prolan.tycho.release3' range='[0.0.0,999.999.999)' severity='0'/>
     <properties size='4'>
       <property name='org.eclipse.equinox.p2.name' value='Release3'/>
       <property name='maven-groupId' value='com.prolan.tycho'/>
       <property name='maven-artifactId' value='com.prolan.tycho.release3'/>
-      <property name='maven-version' value='1.1.16-SNAPSHOT'/>
+      <property name='maven-version' value='999.999.999'/>
     </properties>
     <provides size='5'>
-      <provided namespace='org.eclipse.equinox.p2.iu' name='com.prolan.tycho.release3' version='1.1.16.201808071337'/>
-      <provided namespace='osgi.bundle' name='com.prolan.tycho.release3' version='1.1.16.201808071337'/>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='com.prolan.tycho.release3' version='999.999.999'/>
+      <provided namespace='osgi.bundle' name='com.prolan.tycho.release3' version='999.999.999'/>
       <provided namespace='java.package' name='com.prolan.tycho.release3' version='0.0.0'/>
-      <provided namespace='osgi.identity' name='com.prolan.tycho.release3' version='1.1.16.201808071337'>
+      <provided namespace='osgi.identity' name='com.prolan.tycho.release3' version='999.999.999'>
         <properties size='1'>
           <property name='type' value='osgi.bundle'/>
         </properties>
@@ -20,13 +20,13 @@
       <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
     </provides>
     <artifacts size='1'>
-      <artifact classifier='osgi.bundle' id='com.prolan.tycho.release3' version='1.1.16.201808071337'/>
+      <artifact classifier='osgi.bundle' id='com.prolan.tycho.release3' version='999.999.999'/>
     </artifacts>
     <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
     <touchpointData size='1'>
       <instructions size='1'>
         <instruction key='manifest'>
-          Bundle-SymbolicName: com.prolan.tycho.release3&#xA;Bundle-Version: 1.1.16.201808071337&#xA;
+          Bundle-SymbolicName: com.prolan.tycho.release3&#xA;Bundle-Version: 999.999.999&#xA;
         </instruction>
       </instructions>
     </touchpointData>
