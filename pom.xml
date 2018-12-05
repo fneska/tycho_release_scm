@@ -67,9 +67,6 @@
 						<!--environment> <os>linux</os> <ws>gtk</ws> <arch>x86</arch> </environment -->
 						<!--environment> <os>linux</os> <ws>gtk</ws> <arch>x86_64</arch> </environment -->
 						<!--<environment> <os>win32</os> <ws>win32</ws> <arch>x86</arch> </environment> -->
-						<!--environment> <os>linux</os> <ws>gtk</ws> <arch>x86</arch> </environment -->
-						<!--environment> <os>linux</os> <ws>gtk</ws> <arch>x86_64</arch> </environment -->
-						<!--<environment> <os>win32</os> <ws>win32</ws> <arch>x86</arch> </environment> -->
 						
 						
 						<environment>
@@ -107,7 +104,7 @@
 						<goals>
 							<goal>checkin</goal>
 							<goal>tag</goal>
-							<goal>check-local-modification</goal>
+							
 						</goals>
 						
 					</execution>
