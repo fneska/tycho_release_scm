@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Release2
+Bundle-Name: %pluginName
 Bundle-SymbolicName: com.prolan.tycho.release2
 Bundle-Version: 0.0.103.qualifier
 Export-Package: com.prolan.tycho.release2
-Require-Bundle: com.prolan.tycho.release3;bundle-version="0.0.102.qualifier"
+Require-Bundle: com.prolan.tycho.release3;bundle-version="0.0.103"
